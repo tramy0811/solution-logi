@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Google_Sans } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 
-const googleSans = Google_Sans({
-  variable: "--font-google-sans",
+const sans = Be_Vietnam_Pro({
+  variable: "--font-be-vietnam",
   subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${googleSans.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang="vi" className={`${sans.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>

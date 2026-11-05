@@ -9,7 +9,7 @@ import { IMG, modules, nav } from './content';
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <span className={cn('inline-flex items-center gap-2 text-[22px] font-bold tracking-tight', light ? 'text-white' : 'text-lf-navy')}>
+    <span className={cn('inline-flex items-center gap-2 text-[22px] font-bold', light ? 'text-white' : 'text-lf-navy')}>
       <Image src={`${IMG}/mark.png`} alt="" width={30} height={30} priority />
       <span>
         Logi<span className={light ? 'text-lf-aqua' : 'text-lf-bright'}>Future</span>

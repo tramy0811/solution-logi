@@ -3,23 +3,16 @@ import {
   ArrowRight,
   Barcode,
   BrainCircuit,
-  Building2,
   Check,
   Cloud,
   FileScan,
   Globe2,
   KeyRound,
-  Landmark,
   Layers,
   MapPin,
   Network,
-  Plane,
   Plus,
-  Receipt,
   Repeat2,
-  Ship,
-  Truck,
-  Warehouse,
   Workflow,
   type LucideIcon,
 } from 'lucide-react';
@@ -28,44 +21,36 @@ import { ConsultButton } from './consult';
 import { ai, band, connect, ecosystem, faq, footer, IMG, modules, offices, SAMPLE_LABEL, tech, why } from './content';
 import { SectionTitle } from './section-title';
 import { Logo } from './site-header';
-import { userLogos, userPhotos } from './user-images';
+import { userPhotos } from './user-images';
 
 const reveal = (i = 0) => ({ 'data-reveal': '', style: { '--i': i } as React.CSSProperties });
 
-/* ---------- Dải logo đối tác: một hàng, đen trắng, hover hiện màu ---------- */
-const fallbackIcons: LucideIcon[] = [Ship, Plane, Landmark, Building2, Receipt, Truck, Repeat2, Network, MapPin, Warehouse];
+/* ---------- Dải logo hãng tàu, hãng bay: chạy ngang như CMS, xám khi nghỉ, hover ô trắng + màu gốc ---------- */
+function PartnerTrack({ hidden }: { hidden?: boolean }) {
+  return (
+    <ul className="lf-partner-track" aria-hidden={hidden || undefined}>
+      {connect.partners.map((p) => (
+        <li key={p.file} className="lf-partner">
+          {/* SVG tĩnh, không cần tối ưu ảnh của next/image */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${IMG}/partners/${p.file}`} alt={hidden ? '' : p.name} className={p.tall ? 'lf-partner-logo lf-partner-logo--tall' : 'lf-partner-logo'} loading="lazy" decoding="async" />
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export function Connect() {
-  const logos = userLogos();
-  // Hai lượt giống nhau để dải chạy vòng liền mạch; lượt thứ hai ẩn với trình đọc màn hình.
-  const row = (dup: boolean) =>
-    logos.length
-      ? logos.map((l) => (
-          <li key={`${dup}-${l.src}`} aria-hidden={dup || undefined} className="lf-logo-item flex h-16 w-[168px] shrink-0 items-center justify-center px-4">
-            {/* Logo đối tác do người dùng cung cấp, kích thước gốc không cố định nên dùng img thường */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={l.src} alt={dup ? '' : l.name} className="lf-logo max-h-11 max-w-[140px] object-contain" loading="lazy" />
-          </li>
-        ))
-      : connect.fallback.map((c, i) => {
-          const Icon = fallbackIcons[i % fallbackIcons.length];
-          return (
-            <li key={`${dup}-${c}`} aria-hidden={dup || undefined} className="lf-logo-item flex h-16 shrink-0 items-center gap-2.5 px-7 text-[17px] font-bold text-lf-navy">
-              <Icon className="lf-logo size-6 text-lf-bright" strokeWidth={1.75} aria-hidden />
-              <span className="lf-logo">{c}</span>
-            </li>
-          );
-        });
   return (
     <section className="border-b border-lf-line py-10 md:py-12" aria-labelledby="connect-h">
-      <h2 id="connect-h" className="px-4 text-center text-lg font-bold text-lf-heading md:text-xl" data-reveal>
+      <h2 id="connect-h" className="px-4 text-center text-base font-medium text-lf-text md:text-lg" data-reveal>
         {connect.title}
       </h2>
-      <div className="lf-marquee-wrap mt-6 overflow-hidden">
-        <ul className="lf-marquee flex w-max items-center">
-          {row(false)}
-          {row(true)}
-        </ul>
+      <div className="lf-partner-viewport mt-6">
+        <div className="lf-partner-rail">
+          <PartnerTrack />
+          <PartnerTrack hidden />
+        </div>
       </div>
     </section>
   );
@@ -75,9 +60,9 @@ export function Connect() {
 
 export function Ecosystem() {
   return (
-    <section id="he-sinh-thai" className="px-4 py-14 md:px-6 md:py-20" aria-labelledby="eco-h">
+    <section id="he-sinh-thai" className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="eco-h">
       <SectionTitle id="eco-h" title={ecosystem.title} sub={ecosystem.sub} />
-      <div className="mx-auto mt-10 grid max-w-[1240px] gap-4 rounded-3xl bg-lf-soft p-4 md:p-5 lg:grid-cols-[1fr_1.6fr_1fr]" {...reveal(1)}>
+      <div className="mx-auto mt-8 grid max-w-[1240px] gap-4 rounded-3xl bg-lf-soft p-4 md:p-5 lg:grid-cols-[1fr_1.6fr_1fr]" {...reveal(1)}>
         <div className="rounded-2xl bg-white p-5">
           <p className="font-bold text-lf-navy">{ecosystem.channelsTitle}</p>
           <ul className="mt-4 grid gap-3">
@@ -142,9 +127,9 @@ const techIcons: LucideIcon[] = [BrainCircuit, FileScan, Repeat2, Workflow, Clou
 
 export function Tech() {
   return (
-    <section className="bg-lf-soft px-4 py-14 md:px-6 md:py-16" aria-labelledby="tech-h">
+    <section className="bg-lf-soft px-4 py-12 md:px-6 md:py-16" aria-labelledby="tech-h">
       <SectionTitle id="tech-h" title={tech.title} />
-      <ul className="mx-auto mt-10 grid max-w-[1100px] grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
+      <ul className="mx-auto mt-8 grid max-w-[1100px] grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
         {tech.items.map((t, i) => {
           const Icon = techIcons[i];
           return (
@@ -179,9 +164,9 @@ export function AiSection() {
     </div>
   );
   return (
-    <section className="px-4 py-14 md:px-6 md:py-20" aria-labelledby="ai-h">
+    <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="ai-h">
       <SectionTitle id="ai-h" title={ai.title} sub={ai.sub} />
-      <div className="mx-auto mt-10 grid max-w-[1100px] items-center gap-4 lg:grid-cols-[1fr_220px_1fr] lg:gap-8">
+      <div className="mx-auto mt-8 grid max-w-[1100px] items-center gap-4 lg:grid-cols-[1fr_220px_1fr] lg:gap-8">
         <div className="grid gap-4">
           {card(a, 0)}
           {card(c, 2)}
@@ -207,9 +192,9 @@ const whyIcons: LucideIcon[] = [Layers, Repeat2, Network, Globe2];
 export function Why() {
   const [photo] = userPhotos([`${IMG}/container-ship.webp`]);
   return (
-    <section className="bg-lf-soft px-4 py-14 md:px-6 md:py-20" aria-labelledby="why-h">
+    <section className="bg-lf-soft px-4 py-12 md:px-6 md:py-16" aria-labelledby="why-h">
       <SectionTitle id="why-h" title={why.title} />
-      <div className="mx-auto mt-10 grid max-w-[1100px] items-center gap-10 lg:grid-cols-2">
+      <div className="mx-auto mt-8 grid max-w-[1100px] items-center gap-10 lg:grid-cols-2">
         <div className="relative mx-auto aspect-[4/3.2] w-full max-w-[500px] overflow-hidden rounded-2xl" data-reveal>
           <Image src={photo} alt={why.imgAlt} fill sizes="(min-width: 1024px) 500px, 100vw" className="object-cover object-[30%_60%]" />
         </div>
@@ -232,7 +217,7 @@ export function Why() {
           </a>
         </div>
       </div>
-      <dl className="mx-auto mt-10 grid max-w-[1100px] grid-cols-2 gap-px overflow-hidden rounded-2xl bg-lf-line lg:grid-cols-4" data-reveal>
+      <dl className="mx-auto mt-8 grid max-w-[1100px] grid-cols-2 gap-px overflow-hidden rounded-2xl bg-lf-line lg:grid-cols-4" data-reveal>
         {why.stats.map((s) => (
           <div key={s.label} className="flex flex-col-reverse bg-white px-6 py-6">
             <dt className="mt-1 text-sm leading-snug text-lf-text">{s.label}</dt>
@@ -256,7 +241,7 @@ export function Band() {
           <Image src={photo} alt="Container xếp chồng trên toa tàu chờ xuất phát" fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover" />
         </div>
         <div>
-          <h2 id="band-h" className="text-[28px] font-bold leading-tight tracking-tight md:text-[38px]">
+          <h2 id="band-h" className="text-[28px] font-bold leading-tight md:text-[38px]">
             {band.line1} <span className="text-lf-aqua">{band.line2}</span>
           </h2>
           <p className="mt-4 leading-[1.85] text-white/85">{band.body}</p>
@@ -272,7 +257,7 @@ export function Band() {
 /* ---------- FAQ ---------- */
 export function Faq() {
   return (
-    <section id="hoi-dap" className="px-4 py-14 md:px-6 md:py-20" aria-labelledby="faq-h">
+    <section id="hoi-dap" className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="faq-h">
       <SectionTitle id="faq-h" title={faq.title} />
       <div className="mx-auto mt-8 max-w-[960px]" data-reveal>
         <div className="divide-y divide-lf-line border-y border-lf-line">

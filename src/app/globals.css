@@ -22,7 +22,7 @@
   --color-lf-hover: #0047d6;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-google-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -153,6 +153,9 @@ body { color: var(--color-lf-ink); }
 .lf-hero-overlay { background: linear-gradient(100deg, rgb(3 32 120 / 0.96) 0%, rgb(5 70 200 / 0.88) 45%, rgb(5 92 255 / 0.55) 100%); }
 @keyframes lf-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
 .lf-hero-photo { animation: lf-zoom 1600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+/* Chữ hero hiện bằng CSS ngay khi trang mở, không chờ JS */
+@keyframes lf-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.lf-rise { animation: lf-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: calc(var(--i, 0) * 110ms + 100ms); }
 .lf-card-blue { background: var(--color-lf-navy); }
 
 /* Hiện dần khi cuộn: chỉ ẩn khi có JS (html.js), luôn hiện khi tắt script hoặc giảm chuyển động */
@@ -167,11 +170,24 @@ body { color: var(--color-lf-ink); }
 .lf-callout { animation: lf-fade 500ms ease-out both; animation-delay: calc(var(--i, 0) * 90ms + 750ms); }
 .lf-float { animation: lf-float 6s ease-in-out 1.4s infinite; }
 
-/* Dải logo: một hàng chạy liên tục, đen trắng, hover/focus hiện màu */
-@keyframes lf-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.lf-marquee { animation: lf-marquee 45s linear infinite; }
-.lf-marquee-wrap:hover .lf-marquee, .lf-marquee-wrap:focus-within .lf-marquee { animation-play-state: paused; }
-.lf-marquee-wrap { mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+/* Dải logo hãng: giống partner-marquee của CMS. Nhân đôi danh sách, dịch -50%, dừng khi rê chuột */
+@keyframes lf-marquee { to { transform: translateX(-50%); } }
+.lf-partner-viewport { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.lf-partner-rail { display: flex; width: max-content; animation: lf-marquee 48s linear infinite; }
+.lf-partner-viewport:hover .lf-partner-rail, .lf-partner-viewport:focus-within .lf-partner-rail { animation-play-state: paused; }
+.lf-partner-track { display: flex; flex: none; align-items: center; gap: 16px; margin: 0; padding: 0 16px 0 0; list-style: none; }
+.lf-partner { display: grid; place-items: center; width: 176px; height: 72px; padding: 12px 20px; border-radius: 12px; transition: background-color 200ms ease, box-shadow 200ms ease; }
+.lf-partner-logo { display: block; max-width: 100%; max-height: 32px; filter: grayscale(1); opacity: 0.6; transition: filter 200ms ease, opacity 200ms ease; }
+.lf-partner-logo--tall { max-height: 44px; }
+.lf-partner:hover { background: #fff; box-shadow: 0 6px 18px -10px rgb(11 29 66 / 0.35); }
+.lf-partner:hover .lf-partner-logo { filter: none; opacity: 1; }
+@media (hover: none) { .lf-partner-logo { filter: none; opacity: 1; } }
+@media (max-width: 639px) {
+  .lf-partner { width: 140px; height: 60px; padding: 8px 16px; }
+  .lf-partner-logo { max-height: 26px; }
+  .lf-partner-logo--tall { max-height: 36px; }
+}
+/* Logo khách hàng ở các khối khác: xám khi nghỉ, hiện màu khi rê chuột */
 .lf-logo { filter: grayscale(1); opacity: 0.6; transition: filter 300ms ease, opacity 300ms ease; }
 .lf-logo-item:hover .lf-logo, .lf-logo-item:focus-within .lf-logo { filter: none; opacity: 1; }
 @media (hover: none) { .lf-logo { filter: none; opacity: 1; } }
@@ -191,5 +207,10 @@ body { color: var(--color-lf-ink); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js [data-reveal] { opacity: 1; transform: none; transition: none; }
-  .lf-hero-photo, .lf-slab, .lf-callout, .lf-float, .lf-marquee, .lf-panel, .lf-scrim, .lf-tab-panel { animation: none; }
+  .lf-hero-photo, .lf-rise, .lf-slab, .lf-callout, .lf-float, .lf-panel, .lf-scrim, .lf-tab-panel { animation: none; }
+  /* Giảm chuyển động: dải logo không chạy, cuộn ngang bằng tay, bỏ bản nhân đôi */
+  .lf-partner-viewport { overflow-x: auto; mask-image: none; scrollbar-width: thin; }
+  .lf-partner-rail { animation: none; }
+  .lf-partner-track[aria-hidden='true'] { display: none; }
+  .lf-partner-track { padding-left: 16px; }
 }

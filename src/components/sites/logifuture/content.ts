@@ -106,8 +106,24 @@ export const capabilities = {
 
 export const connect = {
   title: 'Kết nối liền mạch với đối tác',
-  // Hiện khi chưa có logo thật trong D:\LogiFuture\solution\image\logos
-  fallback: ['Hãng tàu', 'Hãng hàng không', 'Hải quan điện tử', 'Ngân hàng', 'Hóa đơn điện tử', 'Nhà xe đối tác', 'EDI', 'API', 'Định vị GPS', 'Kho đối tác'],
+  // Logo SVG giống CMS (apps/web/public/partners), bản gốc trên Wikimedia Commons, đều Public domain.
+  // Nhãn hiệu vẫn thuộc các hãng: chỉ giữ hãng LogiFuture thực sự làm việc cùng.
+  partners: [
+    { name: 'Maersk', file: 'maersk.svg' },
+    { name: 'MSC', file: 'msc.svg', tall: true },
+    { name: 'CMA CGM', file: 'cma-cgm.svg', tall: true },
+    { name: 'COSCO SHIPPING', file: 'cosco.svg', tall: true },
+    { name: 'Ocean Network Express', file: 'one.svg', tall: true },
+    { name: 'Evergreen Line', file: 'evergreen.svg' },
+    { name: 'HMM', file: 'hmm.svg' },
+    { name: 'ZIM', file: 'zim.svg', tall: true },
+    { name: 'Vietnam Airlines', file: 'vietnam-airlines.svg' },
+    { name: 'Singapore Airlines', file: 'singapore-airlines.svg' },
+    { name: 'Emirates', file: 'emirates.svg', tall: true },
+    { name: 'Lufthansa Cargo', file: 'lufthansa-cargo.svg' },
+    { name: 'Cathay Pacific', file: 'cathay.svg' },
+    { name: 'Korean Air Cargo', file: 'korean-air-cargo.svg' },
+  ] as { name: string; file: string; tall?: boolean }[],
 };
 
 export const ecosystem = {
@@ -282,6 +298,7 @@ export const values = {
 export const architecture = {
   title: 'Kiến trúc nền tảng kết nối từ hiện trường đến hệ thống quản trị',
   sub: 'Logi Platform xây trên kiến trúc mở: ứng dụng hiện trường, phân hệ nghiệp vụ, hệ thống nền và dữ liệu nằm trong một luồng thống nhất, kết nối đối tác qua một cổng tích hợp.',
+  imgAlt: 'Sơ đồ kiến trúc LogiFuture: hạ tầng dữ liệu, tự động hóa kết nối thiết bị, điều hành giám sát, quản lý vận hành FMS TMS WMS, quản trị chiến lược AI và các sản phẩm, dịch vụ đi kèm',
   side: 'Tầng vận hành logistics',
   loop: 'Dữ liệu khép kín',
   layers: [

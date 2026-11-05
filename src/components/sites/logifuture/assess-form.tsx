@@ -46,10 +46,10 @@ export function AssessSection({ logos = [] }: { logos?: { src: string; name: str
     'min-h-12 w-full rounded-xl border border-white/25 bg-white/10 px-4 text-base text-white placeholder:text-white/55 outline-2 outline-transparent transition-[border-color] hover:border-white/50 focus-visible:outline-lf-aqua aria-invalid:border-red-400 [&>option]:text-lf-ink';
 
   return (
-    <section id="danh-gia" className="lf-hero-bg px-4 py-14 text-white md:px-6 md:py-20" aria-labelledby="assess-h">
+    <section id="danh-gia" className="lf-hero-bg px-4 py-12 text-white md:px-6 md:py-16" aria-labelledby="assess-h">
       <div className="mx-auto grid max-w-[1240px] items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div data-reveal>
-          <h2 id="assess-h" className="text-[28px] font-bold leading-tight tracking-tight md:text-[38px]">
+          <h2 id="assess-h" className="text-[28px] font-bold leading-tight md:text-[38px]">
             {assess.title}
           </h2>
           <p className="mt-4 leading-relaxed text-white/85">{assess.sub}</p>
