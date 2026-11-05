@@ -9,15 +9,15 @@ export const nav = {
   cta: 'Đặt lịch demo',
   links: [
     { href: '#bai-toan', label: 'Bài toán', desc: 'Những điểm nghẽn LogiFuture giải quyết' },
-    { href: '#he-sinh-thai', label: 'Nền tảng', desc: 'Doanh nghiệp được gì khi dùng Logi Platform' },
-    { href: '#giai-phap', label: 'Năng lực', desc: 'CRM, FMS, TMS, WMS, hải quan, tài chính, AI' },
+    { href: '#he-sinh-thai', label: 'Nền tảng', desc: 'Từ ứng dụng hiện trường đến báo cáo quản trị' },
+    { href: '#giai-phap', label: 'Giải pháp', desc: 'Bán hàng, giao nhận, vận tải, kho và tài chính' },
     { href: '#mo-hinh', label: 'Theo mô hình', desc: 'Forwarder, vận tải, kho bãi, 3PL, hải quan' },
     { href: '#lo-trinh', label: 'Lộ trình', desc: 'Năm giai đoạn, bắt đầu từ nền tảng' },
     { href: '#hoi-dap', label: 'Hỏi đáp', desc: 'Những câu doanh nghiệp hay hỏi' },
   ],
   modulesTitle: 'Phân hệ Logi Platform',
-  contactTitle: 'Cần tư vấn ngay?',
-  contactBody: 'Để lại thông tin, đội LogiFuture liên hệ lại để demo trên đúng quy trình của bạn.',
+  contactTitle: 'Tư vấn giải pháp logistics',
+  contactBody: 'Khảo sát nhu cầu và lựa chọn giải pháp phù hợp với mô hình vận hành của doanh nghiệp.',
 };
 
 export const modules = [
@@ -33,18 +33,18 @@ export const modules = [
 ];
 
 export const hero = {
-  line1: 'LogiFuture – Nền tảng vận hành logistics toàn diện',
-  line2: 'cho forwarder, 3PL và doanh nghiệp vận tải',
-  sub: 'Kết nối bán hàng, giao nhận, vận tải, kho, hải quan và tài chính trên một dữ liệu chung, từ báo giá đến thu tiền.',
-  points: ['Thay thế Excel, email và các phần mềm rời rạc', 'Giảm nhập liệu lặp lại, nắm rõ lô hàng và lãi lỗ theo từng job'],
-  cta: 'Nhận tư vấn theo bài toán của bạn',
-  secondary: 'Xem các bài toán',
+  line1: 'Nền tảng quản trị logistics toàn diện',
+  line2: 'thông minh tích hợp AI',
+  sub: 'Nền tảng thống nhất điều phối toàn bộ vận hành logistics từ kinh doanh, giao nhận đến vận tải, kho bãi và tài chính, hỗ trợ ra quyết định thông minh bằng AI theo thời gian thực.',
+  points: ['Liên thông dữ liệu từ kinh doanh đến hiện trường và kế toán.', 'Quản lý tiến độ, chi phí và hiệu quả từng lô hàng.'],
+  cta: 'Đăng ký tư vấn',
+  secondary: 'Khám phá nền tảng',
   imgAlt: 'Cảng container lúc hoàng hôn: tàu hàng, cẩu bờ, xe đầu kéo và máy bay chở hàng',
 };
 
 export const pains = {
-  title: 'Các bài toán LogiFuture giải quyết trong vận hành logistics',
-  sub: 'Từ báo giá đến thu tiền, Logi Platform xử lý những điểm nghẽn doanh nghiệp logistics gặp hằng ngày',
+  title: 'Giải quyết các thách thức trong vận hành logistics',
+  sub: 'Dữ liệu phân tán, quy trình thủ công và thiếu thông tin đối soát làm chậm hoạt động. LogiFuture tập trung hồ sơ lô hàng và kết nối công việc giữa các bộ phận.',
   reality: 'Thực tế',
   solve: 'LogiFuture giải quyết',
   result: 'Kết quả',
@@ -89,23 +89,23 @@ export const pains = {
 };
 
 export const capabilities = {
-  title: 'Các năng lực vận hành cốt lõi của Logi Platform',
-  result: 'Kết quả',
-  cta: 'Demo theo bài toán của bạn',
+  title: 'Giải pháp nổi bật',
+  result: 'Giúp đội ngũ',
+  cta: 'Xem demo phân hệ này',
   items: [
-    { id: 'crm', name: 'Logi.CRM – Quản lý khách hàng và RFQ', features: ['Hồ sơ khách, đầu mối, phân loại, người phụ trách', 'Tiếp nhận RFQ từ form, email và Portal', 'Hợp đồng, SLA, điều khoản thanh toán, hạn mức', 'Nhật ký chăm sóc, lịch hẹn, khiếu nại'], result: 'Không bỏ sót yêu cầu, theo dõi được tỷ lệ chốt theo sales' },
-    { id: 'fms', name: 'Logi.FMS – Báo giá, booking và job', features: ['Bảng giá cước theo hãng, tuyến, phụ phí', 'Báo giá nhiều phương án, duyệt nội bộ', 'Booking, theo dõi cut-off, ETD, ETA', 'SI, House/Master B/L draft, AWB'], result: 'Một job xuyên suốt từ báo giá đến phát hành vận đơn' },
-    { id: 'tms', name: 'Logi.TMS – Điều phối vận tải', features: ['Transport, Pickup, Delivery Order từ job', 'Gán xe, tài xế, rơ-moóc, nhà thầu phụ', 'EIR, Gate-in, Gate-out, hạn lưu bãi', 'GPS và POD có ảnh, chữ ký'], result: 'Điều xe đúng lịch, biết chuyến đang ở đâu' },
-    { id: 'wms', name: 'Logi.WMS – Quản lý kho', features: ['Nhập kho GRN, kiểm đếm, gán vị trí', 'Tồn theo vị trí, lô, hạn dùng', 'Picking, packing, gom hàng lên xe', 'Kiểm kê và điều chỉnh qua bước duyệt'], result: 'Tồn kho chính xác, xuất nhập nhanh' },
-    { id: 'customs', name: 'Logi.Customs – Khai báo và thông quan', features: ['Gom và kiểm tra bộ hồ sơ khai', 'Lập tờ khai từ dữ liệu job và chứng từ OCR', 'Gửi hải quan điện tử, khai bổ sung', 'Theo dõi giấy phép, C/O, hạn hiệu lực'], result: 'Hồ sơ đủ và khớp, theo dõi thông quan trên một màn hình' },
-    { id: 'finance', name: 'Logi.Finance – Công nợ và đối soát', features: ['Hóa đơn phải thu, Debit/Credit Note', 'Chi phí phải trả nhà xe, kho, hãng tàu', 'Thu chi và đối soát với ngân hàng', 'Lãi lỗ theo từng job'], result: 'Công nợ minh bạch, biết lãi lỗ từng lô hàng' },
-    { id: 'dms', name: 'Logi.DMS – Kho chứng từ trung tâm', features: ['Nhận chứng từ từ sáu phân hệ nghiệp vụ', 'OCR, trích xuất và phân loại 46 loại chứng từ', 'Kiểm tra khớp số liệu, lưu phiên bản', 'Phân quyền theo vai trò, job, khách hàng'], result: 'Chứng từ không thất lạc, tìm theo nội dung' },
-    { id: 'ai', name: 'Logi.Data & Logi.AI – Báo cáo và trợ lý AI', features: ['Dashboard vận hành, tài chính, bán hàng', 'Dự báo sản lượng, trễ chuyến, giá cước', 'Hỏi đáp và tìm chứng từ bằng câu hỏi thường', 'Tạo báo cáo, nhắc việc trong quy trình'], result: 'Ra quyết định dựa trên dữ liệu của cả chuỗi vận hành' },
+    { id: 'fms', name: 'FMS / Giao nhận và chứng từ', features: ['Tra giá cước theo hãng, tuyến và thời hạn áp dụng', 'Lập báo giá kèm phụ phí và bước duyệt', 'Theo dõi booking, lịch tàu và hạn gửi chứng từ', 'Chuẩn bị SI, vận đơn đường biển và hàng không'], result: 'dùng lại thông tin từ báo giá để xử lý booking và chứng từ.' },
+    { id: 'tms', name: 'TMS / Điều phối vận tải', features: ['Tạo lệnh vận chuyển từ hồ sơ lô hàng', 'Sắp xe, tài xế và nhà thầu cho từng chuyến', 'Theo dõi mốc nhận hàng, vào cảng và giao hàng', 'Nhận ảnh giao hàng và xác nhận từ tài xế'], result: 'theo dõi tiến độ chuyến và xử lý phát sinh trên cùng lịch điều phối.' },
+    { id: 'wms', name: 'WMS / Nhập xuất và tồn kho', features: ['Kiểm đếm, quét mã và sắp vị trí khi nhập hàng', 'Theo dõi tồn theo chủ hàng, vị trí, lô và hạn dùng', 'Lập kế hoạch lấy hàng, đóng gói và xuất kho', 'Kiểm kê và lưu lại các lần điều chỉnh'], result: 'tra được hàng đang ở đâu, còn bao nhiêu và thuộc chủ hàng nào.' },
+    { id: 'crm', name: 'CRM / Khách hàng và yêu cầu báo giá', features: ['Lưu đầu mối liên hệ và người phụ trách từng khách', 'Theo dõi yêu cầu báo giá và lịch sử phản hồi', 'Quản lý hợp đồng, hạn mức và điều khoản thanh toán', 'Ghi nhận lịch hẹn, chăm sóc và phản ánh của khách'], result: 'theo sát từng cơ hội bán hàng, từ lúc nhận yêu cầu đến khi chốt giá.' },
+    { id: 'customs', name: 'Customs / Hồ sơ hải quan', features: ['Tập hợp chứng từ theo từng bộ hồ sơ', 'Đối chiếu thông tin trước khi lập tờ khai', 'Theo dõi trạng thái xử lý và yêu cầu bổ sung', 'Quản lý giấy phép, C/O và thời hạn hiệu lực'], result: 'theo sát hồ sơ cần xử lý và giảm thời gian gom chứng từ.' },
+    { id: 'finance', name: 'Finance / Chi phí và công nợ', features: ['Theo dõi khoản phải thu theo khách và lô hàng', 'Tập hợp chi phí hãng tàu, nhà xe và kho', 'Đối chiếu thanh toán với từng đối tác', 'So sánh doanh thu, chi phí dự kiến và thực tế'], result: 'nắm công nợ đến hạn và lãi lỗ của từng lô hàng.' },
+    { id: 'dms', name: 'DMS / Quản lý chứng từ', features: ['Lưu chứng từ theo khách hàng và hồ sơ lô hàng', 'Đọc thông tin từ bản scan để hỗ trợ nhập liệu', 'Quản lý phiên bản và lịch sử chỉnh sửa', 'Cấp quyền xem, tải và xử lý theo vai trò'], result: 'tìm lại đúng hồ sơ và kiểm tra được phiên bản đang sử dụng.' },
+    { id: 'ai', name: 'Data & AI / Báo cáo và tra cứu', features: ['Xem sản lượng, doanh thu và chi phí theo kỳ', 'Lọc báo cáo theo khách, tuyến và bộ phận', 'Tìm thông tin bằng câu hỏi từ dữ liệu được cấp quyền', 'Tổng hợp báo cáo để người phụ trách kiểm tra'], result: 'bớt thời gian tổng hợp file trước mỗi buổi báo cáo.' },
   ],
 };
 
 export const connect = {
-  title: 'Kết nối liền mạch với đối tác',
+  title: 'Kết nối trong chuỗi cung ứng toàn cầu',
   // Logo SVG giống CMS (apps/web/public/partners), bản gốc trên Wikimedia Commons, đều Public domain.
   // Nhãn hiệu vẫn thuộc các hãng: chỉ giữ hãng LogiFuture thực sự làm việc cùng.
   partners: [
@@ -127,8 +127,8 @@ export const connect = {
 };
 
 export const ecosystem = {
-  title: 'Một nền tảng, may đo theo cách bạn vận hành',
-  sub: 'Chọn đúng phân hệ doanh nghiệp cần, cấu hình quy trình theo cách đội ngũ đang làm. Chuyên gia LogiFuture khảo sát và đề xuất lộ trình riêng cho từng doanh nghiệp.',
+  title: 'Các nghiệp vụ cùng làm việc trên một hệ thống',
+  sub: 'Từ yêu cầu báo giá đến đối soát thanh toán, dữ liệu được chuyển tiếp giữa các bộ phận. Doanh nghiệp lựa chọn phân hệ và quy trình phù hợp với phạm vi hoạt động.',
   benefits: [
     { title: 'Nhập một lần, dùng cho mọi khâu', body: 'Dữ liệu từ báo giá đi tiếp sang booking, vận tải, hải quan và hóa đơn, không gõ lại.' },
     { title: 'Thấy cả lô hàng trên một màn hình', body: 'Màn hình job gom vận tải, kho, hải quan, tài chính và chứng từ của cùng một lô.' },
@@ -163,24 +163,24 @@ export const tech = {
 };
 
 export const ai = {
-  title: 'Trợ lý AI trong từng nghiệp vụ logistics',
-  sub: 'Tìm, hỏi đáp, tạo báo cáo và hỗ trợ quy trình trên dữ liệu thật của doanh nghiệp',
+  title: 'Tích hợp AI vào từng nghiệp vụ logistics',
+  sub: 'Ứng dụng AI trong xử lý chứng từ, lập kế hoạch vận tải và phân tích dữ liệu. Logi.AI hỗ trợ nhân sự xử lý công việc trên nguồn dữ liệu được phân quyền của doanh nghiệp.',
   center: 'Logi.AI',
   cards: [
-    { title: 'Tìm chứng từ theo nội dung', body: 'Chứng từ được OCR và trích xuất trường, tìm B/L, tờ khai, hóa đơn bằng nội dung thay vì tên tệp.' },
-    { title: 'Hỏi đáp & phân tích', body: 'Hỏi về job, công nợ, sản lượng bằng câu hỏi thường, trợ lý hiểu ngữ cảnh màn hình đang xem.' },
-    { title: 'Tạo báo cáo tự động', body: 'Dashboard vận hành, tài chính, bán hàng được dựng từ dữ liệu của cả chín phân hệ.' },
-    { title: 'Hỗ trợ quy trình', body: 'Nhắc việc, gợi ý bước tiếp theo trong job và đẩy yêu cầu duyệt đến đúng người.' },
+    { title: 'Số hóa chứng từ bằng OCR', body: 'Trích xuất thông tin từ vận đơn, hóa đơn và chứng từ giao nhận; hỗ trợ đối chiếu trước khi cập nhật vào hồ sơ lô hàng.' },
+    { title: 'Hỗ trợ lập kế hoạch vận tải', body: 'Phân tích nhu cầu vận chuyển, lịch giao nhận và dữ liệu chuyến để hỗ trợ điều phối xe và theo dõi nguy cơ chậm tiến độ.' },
+    { title: 'Phân tích chi phí và dự báo', body: 'Tổng hợp doanh thu, chi phí theo lô hàng và tuyến; hỗ trợ nhận diện biến động và lập kế hoạch sản lượng.' },
+    { title: 'Trợ lý nghiệp vụ logistics', body: 'Tra cứu trạng thái lô hàng, tìm chứng từ và tổng hợp báo cáo bằng câu hỏi tự nhiên từ dữ liệu được cấp quyền.' },
   ],
 };
 
 export const models = {
   title: 'Giải pháp theo mô hình doanh nghiệp',
-  subA: 'Cấu hình theo',
-  subB: 'forwarder, 3PL hoặc cả hai',
-  subC: ', bật đúng phân hệ bạn cần',
+  subA: 'Mỗi mô hình có yêu cầu riêng.',
+  subB: 'Chọn nghiệp vụ cần quản lý trước',
+  subC: ' và mở rộng khi doanh nghiệp cần.',
   using: 'Phân hệ sử dụng',
-  cta: 'Đăng kí tư vấn miễn phí',
+  cta: 'Trao đổi về mô hình của bạn',
   items: [
     { id: 'sea', tab: 'Giao nhận đường biển', img: 'container-ship.webp', alt: 'Tàu container rời cảng', points: ['Báo giá nhiều phương án theo hãng tàu, tuyến, phụ phí', 'Booking, SI, House/Master B/L trên cùng một job', 'Khách theo dõi lô hàng và tải chứng từ trên Portal'], mods: 'CRM · FMS · DMS · Portal' },
     { id: 'air', tab: 'Giao nhận hàng không', img: 'air-freighter.webp', alt: 'Cửa hàng hóa mũi máy bay Boeing 747-8F', points: ['Booking với hãng bay, theo dõi cut-off, ETD, ETA', 'Phát hành AWB từ dữ liệu job', 'Bộ chứng từ chuyển thẳng sang khai hải quan'], mods: 'FMS · Customs · DMS' },
@@ -206,17 +206,17 @@ export const why = {
 };
 
 export const rollout = {
-  title: 'Lộ trình triển khai',
-  subA: 'Năm giai đoạn,',
-  subB: ' bắt đầu từ nền tảng và mở rộng dần',
+  title: 'Triển khai từng bước, theo nhịp vận hành',
+  subA: 'Chọn phạm vi vừa sức,',
+  subB: ' chạy thử với đội ngũ rồi mới mở rộng.',
   prev: 'Giai đoạn trước',
   next: 'Giai đoạn tiếp theo',
   items: [
-    { phase: 'Giai đoạn 1', title: 'Nền tảng: đăng nhập một lần, phân quyền, dữ liệu gốc, kho chứng từ', img: 'singapore-harbour.webp' },
-    { phase: 'Giai đoạn 2', title: 'Xương sống lô hàng: Workspace với CRM, FMS, TMS và Driver App', img: 'container-ship.webp' },
-    { phase: 'Giai đoạn 3', title: 'Kho, hải quan, tài chính: WMS, Customs, Finance và Warehouse App', img: 'automated-warehouse.webp' },
-    { phase: 'Giai đoạn 4', title: 'Cổng khách hàng: Portal cho khách hàng, nhà xe và hãng vận chuyển', img: 'container-truck.webp' },
-    { phase: 'Giai đoạn 5', title: 'Dữ liệu và AI: BI, dự báo và Logi.AI Assistant khi đã đủ dữ liệu', img: 'containers-stacked.webp' },
+    { phase: '01 / Khảo sát', title: 'Thống nhất quy trình, dữ liệu và mục tiêu cần đo', img: 'singapore-harbour.webp' },
+    { phase: '02 / Thiết lập', title: 'Cấu hình nghiệp vụ, phân quyền và đưa dữ liệu lên hệ thống', img: 'container-ship.webp' },
+    { phase: '03 / Chạy thử', title: 'Xử lý lô hàng thực tế cùng một nhóm phụ trách', img: 'automated-warehouse.webp' },
+    { phase: '04 / Vận hành', title: 'Hướng dẫn đội ngũ, mở rộng phạm vi và theo sát phát sinh', img: 'container-truck.webp' },
+    { phase: '05 / Cải tiến', title: 'Đối chiếu kết quả, điều chỉnh quy trình và bổ sung phân hệ', img: 'containers-stacked.webp' },
   ],
   note: 'Lộ trình gợi ý, điều chỉnh theo quy mô và hệ thống đang dùng.',
 };
@@ -229,20 +229,20 @@ export const band = {
 };
 
 export const faq = {
-  title: 'FAQS',
+  title: 'Câu hỏi thường gặp',
   items: [
-    { q: 'LogiFuture cung cấp những phân hệ phần mềm nào?', a: 'Chín hệ thống: CRM, FMS, TMS, WMS, Customs, Finance, kho chứng từ DMS, Logi.Data và Logi.AI Assistant, phục vụ qua Workspace, Portal, Driver App, Warehouse App và Manager App.' },
-    { q: 'Giải pháp phù hợp với những doanh nghiệp nào?', a: 'Forwarder, 3PL hoặc doanh nghiệp làm cả hai, cùng các đơn vị vận tải, kho bãi và đại lý hải quan.' },
-    { q: 'Có phải dùng cả chín phân hệ ngay từ đầu không?', a: 'Không. Bắt đầu từ phần nền tảng và các phân hệ cần nhất, sau đó mở rộng theo lộ trình năm giai đoạn.' },
-    { q: 'LogiFuture có tích hợp với hệ thống hiện hữu không?', a: 'Mọi kết nối ra ngoài đi qua một cổng tích hợp: hãng tàu, hãng bay, hải quan điện tử, ngân hàng và hóa đơn điện tử, qua EDI hoặc API, có thử lại và nhật ký.' },
-    { q: 'Thời gian triển khai mất bao lâu?', a: 'Tùy số phân hệ và hệ thống đang dùng. Thời gian cụ thể được chốt sau buổi khảo sát và demo.' },
+    { q: 'Doanh nghiệp nhỏ có thể bắt đầu từ đâu?', a: 'Từ công việc đang tốn nhiều thời gian nhất: báo giá, quản lý lô hàng, điều xe hoặc đối soát. Phạm vi ban đầu được chọn sau khi xem quy trình và số người sử dụng.' },
+    { q: 'Có cần triển khai tất cả phân hệ cùng lúc?', a: 'Không. Bạn có thể chọn phân hệ cần trước, cho một nhóm chạy thử, sau đó mở rộng sang các bộ phận khác khi quy trình đã ổn định.' },
+    { q: 'Dữ liệu Excel và phần mềm đang dùng sẽ xử lý thế nào?', a: 'Đội triển khai cùng bạn rà soát dữ liệu cần chuyển và hệ thống cần giữ. Khả năng nhập dữ liệu hoặc kết nối sẽ được kiểm tra trước khi thống nhất phạm vi.' },
+    { q: 'Có thể phân quyền theo bộ phận và chi nhánh không?', a: 'Hệ thống hỗ trợ phân quyền theo vai trò và phạm vi công việc. Trong quá trình khảo sát, doanh nghiệp xác định quyền xem, cập nhật và phê duyệt cho từng bộ phận, chi nhánh và nhóm người dùng.' },
+    { q: 'Bao lâu đội ngũ có thể bắt đầu sử dụng?', a: 'Thời gian phụ thuộc vào số nghiệp vụ, chất lượng dữ liệu và yêu cầu kết nối. Sau khảo sát, LogiFuture sẽ đề xuất các mốc thiết lập, chạy thử và đưa vào sử dụng.' },
   ],
-  ctaText: 'Đăng ký tư vấn miễn phí để nhận giải pháp phù hợp nhất cho doanh nghiệp của bạn',
-  cta: 'Đăng ký ngay',
+  ctaText: 'Trao đổi với LogiFuture để xác định phân hệ và phạm vi triển khai phù hợp.',
+  cta: 'Đăng ký tư vấn',
 };
 
 export const footer = {
-  about: 'Nền tảng vận hành logistics toàn diện cho forwarder, 3PL và doanh nghiệp vận tải.',
+  about: 'Quản lý lô hàng, vận tải, kho và công nợ. Để các bộ phận phối hợp dễ hơn mỗi ngày.',
   cols: [
     { title: 'Giải pháp', links: [{ href: '#he-sinh-thai', label: 'Hệ sinh thái Logi Platform' }, { href: '#giai-phap', label: 'Giải pháp nổi bật' }, { href: '#mo-hinh', label: 'Theo mô hình doanh nghiệp' }] },
     { title: 'Phân hệ', links: [{ href: '#giai-phap', label: 'Logi.FMS' }, { href: '#giai-phap', label: 'Logi.TMS' }, { href: '#giai-phap', label: 'Logi.WMS' }, { href: '#giai-phap', label: 'Logi.Customs' }, { href: '#giai-phap', label: 'Logi.Finance' }, { href: '#giai-phap', label: 'Logi.DMS' }] },
@@ -263,8 +263,8 @@ export const photoCredits = [
 ];
 
 export const consult = {
-  title: 'Form nhận tư vấn',
-  sub: 'Đội LogiFuture liên hệ lại để demo trên đúng quy trình của bạn.',
+  title: 'Đăng ký tư vấn giải pháp',
+  sub: 'Để lại nhu cầu và thông tin liên hệ. LogiFuture sẽ cùng bạn xem quy trình hiện tại, nghiệp vụ cần quản lý và phương án triển khai.',
   name: 'Họ và tên',
   phone: 'Số điện thoại',
   email: 'Email công việc',
@@ -275,7 +275,7 @@ export const consult = {
   submit: 'Gửi yêu cầu',
   close: 'Đóng',
   invalid: 'Cần họ tên và email hoặc số điện thoại hợp lệ.',
-  notConnected: 'Chưa gửi được: biểu mẫu chưa nối với hệ thống nhận yêu cầu.',
+  notConnected: 'Biểu mẫu hiện chưa nhận yêu cầu trực tuyến. Thông tin của bạn chưa được gửi.',
   sent: 'Đã nhận yêu cầu. Đội LogiFuture sẽ liên hệ lại.',
   failed: 'Gửi chưa thành công. Thử lại sau một phút.',
 };
@@ -285,19 +285,19 @@ export const consult = {
 export const SAMPLE_LABEL = 'Nội dung mẫu';
 
 export const values = {
-  title: 'Kiểm soát và tối ưu vận hành logistics trên một nền tảng thống nhất',
-  sub: 'Logi Platform không chỉ lưu dữ liệu, mà biến dữ liệu thành khả năng điều hành thực tế, từ bán hàng, giao nhận, vận tải, kho đến tài chính.',
+  title: 'Nâng cao hiệu quả quản trị và vận hành logistics',
+  sub: 'Kết nối các bộ phận trên cùng nguồn dữ liệu, chuẩn hóa quy trình và cung cấp thông tin phục vụ điều hành doanh nghiệp.',
   items: [
-    { title: 'Nhìn thấy toàn bộ vận hành theo thời gian thực', body: 'Theo dõi job, chuyến xe, tồn kho, tờ khai và công nợ tại mọi thời điểm' },
-    { title: 'Kiểm soát quy trình, giảm sai lệch', body: 'Quy trình duyệt, nhắc việc và phân quyền theo đúng cách doanh nghiệp vận hành' },
-    { title: 'Tối ưu chi phí theo từng lô hàng', body: 'Doanh thu, chi phí thực tế và lãi lỗ theo job, theo khách, theo tuyến' },
-    { title: 'Chuẩn hóa và mở rộng nhiều chi nhánh', body: 'Một dữ liệu gốc, một quy trình chuẩn cho mọi văn phòng và kho' },
+    { title: 'Quản lý vận hành tập trung', body: 'Theo dõi lô hàng, chuyến xe, tồn kho và tiến độ xử lý trên một hệ thống.' },
+    { title: 'Chuẩn hóa quy trình nghiệp vụ', body: 'Liên thông dữ liệu, thiết lập luồng phê duyệt và phân quyền theo trách nhiệm.' },
+    { title: 'Kiểm soát chi phí và lợi nhuận', body: 'Đối chiếu doanh thu, chi phí và công nợ theo lô hàng, khách hàng và tuyến.' },
+    { title: 'Mở rộng theo nhu cầu', body: 'Lựa chọn phân hệ, cấu hình quy trình và triển khai theo từng giai đoạn.' },
   ],
 };
 
 export const architecture = {
   title: 'Kiến trúc nền tảng kết nối từ hiện trường đến hệ thống quản trị',
-  sub: 'Logi Platform xây trên kiến trúc mở: ứng dụng hiện trường, phân hệ nghiệp vụ, hệ thống nền và dữ liệu nằm trong một luồng thống nhất, kết nối đối tác qua một cổng tích hợp.',
+  sub: 'Văn phòng, tài xế và nhân viên kho cùng cập nhật một hồ sơ. Người quản lý theo dõi tiến độ, chứng từ và chi phí mà không phải chờ từng bộ phận gửi báo cáo.',
   imgAlt: 'Sơ đồ kiến trúc LogiFuture: hạ tầng dữ liệu, tự động hóa kết nối thiết bị, điều hành giám sát, quản lý vận hành FMS TMS WMS, quản trị chiến lược AI và các sản phẩm, dịch vụ đi kèm',
   side: 'Tầng vận hành logistics',
   loop: 'Dữ liệu khép kín',
@@ -359,13 +359,13 @@ export const cases = {
 };
 
 export const whyHub = {
-  title: 'Điểm khác biệt của Logi Platform',
+  title: 'Vì sao lựa chọn LogiFuture?',
   imgAlt: 'Sơ đồ LogiFuture Platform kết nối toàn bộ chuỗi logistics: AI và phân tích dữ liệu, chất lượng, máy móc và thiết bị, kho, năng lượng, sản xuất',
   nodes: ['Bán hàng', 'Giao nhận', 'Vận tải', 'Kho bãi', 'Hải quan', 'Tài chính'],
   cards: [
     { title: 'Kiến trúc mở, tích hợp linh hoạt', body: 'Kết nối hãng tàu, hải quan, ngân hàng và phần mềm hiện có qua một cổng tích hợp, không phải thay toàn bộ hệ thống.' },
-    { title: 'Dữ liệu sẵn sàng cho AI', body: 'Chứng từ được OCR, dữ liệu chuẩn hóa từ đầu để báo cáo, dự báo và trợ lý AI dùng ngay.' },
-    { title: 'Triển khai theo từng giai đoạn', body: 'Bắt đầu từ bài toán trọng tâm, mở rộng theo lộ trình năm giai đoạn, vận hành không gián đoạn.' },
+    { title: 'Chứng từ và báo cáo cùng nguồn dữ liệu', body: 'Lưu chứng từ theo lô hàng, hỗ trợ đọc thông tin từ bản scan và tổng hợp báo cáo từ dữ liệu đã được kiểm tra.' },
+    { title: 'Triển khai theo từng giai đoạn', body: 'Chọn nghiệp vụ ưu tiên, chạy thử với nhóm phụ trách rồi mở rộng sau khi thống nhất cách làm.' },
     { title: 'Tùy biến theo mô hình', body: 'Forwarder, 3PL hay cả hai: quy trình, phân quyền và màn hình cấu hình theo cách doanh nghiệp làm.' },
   ],
   prev: 'Lý do trước',
@@ -386,10 +386,10 @@ export const posts = {
 };
 
 export const assess = {
-  title: 'Đánh giá mức độ phù hợp của Logi Platform với doanh nghiệp của bạn',
-  sub: 'Nhận tư vấn dựa trên hệ thống hiện tại và bài toán vận hành thực tế của doanh nghiệp bạn',
-  checks: ['Phân tích hiện trạng hệ thống (Excel, phần mềm kế toán, TMS...)', 'Đề xuất lộ trình triển khai phù hợp', 'Demo theo bài toán thực tế'],
-  clients: 'Đồng hành cùng doanh nghiệp logistics trên hành trình chuyển đổi số',
+  title: 'Tìm giải pháp phù hợp với doanh nghiệp của bạn',
+  sub: 'Chia sẻ mô hình hoạt động và những vướng mắc hiện tại. LogiFuture sẽ cùng bạn xác định nghiệp vụ ưu tiên, yêu cầu kết nối và phạm vi triển khai.',
+  checks: ['Trao đổi với người trực tiếp làm nghiệp vụ', 'Xem demo theo luồng công việc bạn quan tâm', 'Thống nhất phạm vi và cách đo hiệu quả'],
+  clients: 'Buổi tư vấn tập trung vào quy trình thực tế và nhu cầu của doanh nghiệp.',
   form: {
     name: 'Họ và tên', namePh: 'Nhập tên của bạn',
     company: 'Tên doanh nghiệp', companyPh: 'Nhập tên doanh nghiệp',
@@ -399,7 +399,7 @@ export const assess = {
     phone: 'Số điện thoại', phonePh: 'Nhập số điện thoại',
     topic: 'Bài toán bạn đang quan tâm', topicPh: 'Lựa chọn giải pháp bạn quan tâm',
     need: 'Nhu cầu cụ thể', needPh: 'Mô tả nhu cầu, mục tiêu và phạm vi triển khai',
-    submit: 'Nhận tư vấn & demo miễn phí',
+    submit: 'Gửi nhu cầu tư vấn',
   },
 };
 

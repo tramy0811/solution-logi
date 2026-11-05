@@ -6,7 +6,7 @@ import "./globals.css";
 const sans = Google_Sans({
   variable: "--font-google-sans",
   subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {

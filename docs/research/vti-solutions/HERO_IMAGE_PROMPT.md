@@ -1,0 +1,5 @@
+# LogiFuture hero v3
+
+Generated with the built-in image_gen tool. WebP conversion with Sharp.
+
+Use case: photorealistic-natural. Create a wide landscape website hero background for LogiFuture, a Vietnamese logistics management software company. Realistic editorial architectural photography of a modern container port and adjoining logistics distribution center at early morning blue hour. Main physical scene concentrated in right 60 percent: orderly blue and teal unbranded shipping containers, one realistic quay crane, an unbranded container truck at warehouse entrance, subtle cargo ship in distant harbor. Left 40 percent is quiet dark navy waterfront and sky with very low detail, suitable for white heading overlay. Palette navy #011036, blue #0050ae, restrained teal accents #2bd3b7, natural soft neutral daylight. Credible industrial scale, realistic textures, restrained saturation and contrast, sophisticated corporate photography, generous clean composition. No text, no lettering, no brand logos, no watermarks, no floating dashboards, no neon network lines, no holograms, no sci fi, no exaggerated sunset, no airplanes. Wide 16:9 composition.

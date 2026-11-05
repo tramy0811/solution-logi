@@ -21,7 +21,7 @@ export function AssessSection({ logos = [] }: { logos?: { src: string; name: str
     required.forEach((el) => el.toggleAttribute('aria-invalid', !el.checkValidity()));
     const bad = required.find((el) => !el.checkValidity());
     if (bad) {
-      setMsg(consult.invalid);
+      setMsg('Vui lòng điền đủ các mục bắt buộc và kiểm tra lại email, số điện thoại.');
       bad.focus();
       return;
     }
@@ -43,13 +43,13 @@ export function AssessSection({ logos = [] }: { logos?: { src: string; name: str
   const label = 'grid gap-1.5 text-sm font-medium text-white';
   const req = <span className="text-lf-aqua"> *</span>;
   const input =
-    'min-h-12 w-full rounded-xl border border-white/25 bg-white/10 px-4 text-base text-white placeholder:text-white/55 outline-2 outline-transparent transition-[border-color] hover:border-white/50 focus-visible:outline-lf-aqua aria-invalid:border-red-400 [&>option]:text-lf-ink';
+    'min-h-12 w-full rounded-md border border-white/25 bg-white/10 px-4 text-base text-white placeholder:text-white/55 outline-2 outline-transparent transition-[border-color] hover:border-white/50 focus-visible:outline-lf-aqua aria-invalid:border-red-400 [&>option]:text-lf-ink';
 
   return (
-    <section id="danh-gia" className="lf-hero-bg px-4 py-10 text-white md:px-6 md:py-12" aria-labelledby="assess-h">
+    <section id="danh-gia" className="lf-section bg-lf-navy px-4 text-white md:px-6" aria-labelledby="assess-h">
       <div className="mx-auto grid max-w-[1240px] items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div data-reveal>
-          <h2 id="assess-h" className="text-[28px] font-bold leading-tight md:text-[38px]">
+          <h2 id="assess-h" className="text-[28px] font-semibold leading-tight md:text-[38px]">
             {assess.title}
           </h2>
           <p className="mt-4 leading-relaxed text-white/85">{assess.sub}</p>
@@ -74,7 +74,7 @@ export function AssessSection({ logos = [] }: { logos?: { src: string; name: str
           ) : null}
         </div>
 
-        <form onSubmit={onSubmit} noValidate className="grid gap-4 rounded-3xl border border-white/20 bg-white/5 p-5 md:p-8" data-reveal style={{ '--i': 1 } as React.CSSProperties}>
+        <form onSubmit={onSubmit} noValidate className="grid gap-4 rounded-lg border border-white/20 bg-white/5 p-5 md:p-8" data-reveal style={{ '--i': 1 } as React.CSSProperties}>
           <label className={label}>
             <span>
               {f.name}

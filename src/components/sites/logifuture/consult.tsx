@@ -93,7 +93,7 @@ function ConsultDialog({ dialogRef }: { dialogRef: React.RefObject<HTMLDialogEle
       <form onSubmit={onSubmit} noValidate className="grid gap-5 p-6 md:p-10">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h2 id="consult-title" className="text-2xl font-bold text-lf-heading md:text-3xl">
+            <h2 id="consult-title" className="text-2xl font-semibold text-lf-heading md:text-3xl">
               {consult.title}
             </h2>
             <p className="mt-2 text-lf-text">{consult.sub}</p>

@@ -1,37 +1,42 @@
 import Image from 'next/image';
-import { MoveRight } from './icons';
-import { btnClass } from './btn';
+import { ArrowRight } from './icons';
 import { ConsultButton } from './consult';
 import { hero, IMG } from './content';
 
-// Hero dạng banner: ảnh nền phủ xanh, tiêu đề hai màu, hai dòng lợi ích, hai nút.
-export function Hero({ photo = `${IMG}/hero.webp` }: { photo?: string }) {
+const metrics = [
+  { value: '71', label: 'Năng suất xử lý', up: true },
+  { value: '25', label: 'Chất lượng hồ sơ', up: true },
+  { value: '83', label: 'Thao tác lặp lại', up: false },
+  { value: '32', label: 'Chi phí xử lý', up: false },
+];
+
+export function Hero() {
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-lf-night text-white">
-      <Image src={photo} alt={hero.imgAlt} fill priority sizes="100vw" className="lf-hero-photo -z-20 object-cover object-[70%_50%]" />
-      <div className="lf-hero-overlay absolute inset-0 -z-10" aria-hidden />
-      <div className="mx-auto flex min-h-[560px] max-w-[1240px] items-center px-4 py-16 md:min-h-[620px] md:px-6 lg:min-h-[calc(100svh-64px)] lg:max-h-[760px] lg:py-20">
-        <div className="max-w-[820px]">
-          <h1 className="lf-rise text-[32px] font-bold leading-[1.18] sm:text-[44px] xl:text-[56px]">
-            <span className="block text-lf-aqua">{hero.line1}</span>
-            <span className="block">{hero.line2}</span>
-          </h1>
-          <p className="mt-6 max-w-[42rem] text-base leading-relaxed text-white/90 md:text-lg lf-rise" style={{ '--i': 1 } as React.CSSProperties}>
-            {hero.sub}
-          </p>
-          <div className="lf-rise mt-6 flex gap-4" style={{ '--i': 2 } as React.CSSProperties}>
-            <MoveRight className="mt-1 size-8 shrink-0 text-lf-aqua" strokeWidth={2.25} aria-hidden />
-            <ul className="grid gap-1.5 text-base text-lf-aqua md:text-lg">
-              {hero.points.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
+    <section id="top" className="lf-solution-hero relative isolate overflow-hidden text-white">
+      <Image src={`${IMG}/hero-port-v3.webp`} alt="" fill priority sizes="100vw" className="-z-20 object-cover opacity-20" />
+      <div className="relative mx-auto max-w-[1320px] px-5 py-12 md:px-8 lg:py-14">
+        <h1 tabIndex={-1} className="lf-rise text-[35px] font-semibold leading-[1.18] tracking-[-0.025em] outline-none sm:text-[46px] xl:text-[56px]">
+          <span className="block">{hero.line1}</span>
+          <span className="block text-[clamp(25px,8vw,35px)] text-lf-aqua sm:text-[46px] xl:text-[56px]">{hero.line2}</span>
+        </h1>
+        <div className="mt-7 grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-4">
+          <div>
+            <p className="lf-rise max-w-[560px] text-base leading-[1.9] text-white/95 md:text-[18px]" style={{ '--i': 1 } as React.CSSProperties}>{hero.sub}</p>
+            <div className="lf-rise mt-8 max-w-[500px]" style={{ '--i': 2 } as React.CSSProperties}>
+              <p className="mb-3 text-xs font-medium tracking-[0.1em] text-white/75">MỤC TIÊU HIỆU QUẢ KỲ VỌNG</p>
+              <dl className="grid grid-cols-2 gap-4 sm:gap-x-8 sm:gap-y-5">
+                {metrics.map((m) => (
+                  <div key={m.label} className="rounded-xl border border-lf-aqua/55 bg-lf-blue/25 px-3 py-4 text-center sm:py-5">
+                    <dt className="text-sm font-medium text-lf-aqua sm:text-base">{m.label}</dt>
+                    <dd className="mt-2 flex items-center justify-center gap-2"><span className="text-[42px] font-semibold leading-none sm:text-[58px]">{m.value}<span className="text-xl">%</span></span><ArrowRight className={`size-5 text-lf-aqua ${m.up ? '-rotate-90' : 'rotate-90'}`} aria-hidden /><span className="sr-only">{m.up ? 'tăng' : 'giảm'}</span></dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <div className="lf-rise mt-8" style={{ '--i': 3 } as React.CSSProperties}><ConsultButton>{hero.cta}<ArrowRight className="size-4" aria-hidden /></ConsultButton></div>
           </div>
-          <div className="lf-rise mt-9 flex flex-wrap gap-3" style={{ '--i': 3 } as React.CSSProperties}>
-            <ConsultButton variant="white">{hero.cta}</ConsultButton>
-            <a href="#bai-toan" className={btnClass('ghost-light')}>
-              {hero.secondary}
-            </a>
+          <div className="lf-hero-graphic relative mx-auto w-full max-w-[790px] lg:w-[112%] lg:max-w-none lg:justify-self-end">
+            <Image src={`${IMG}/hero-platform-user.webp`} alt="Sơ đồ LogiFuture Platform kết nối toàn bộ chuỗi logistics do doanh nghiệp cung cấp" width={1536} height={1024} priority sizes="(min-width: 1024px) 760px, 100vw" className="h-auto w-full" />
           </div>
         </div>
       </div>

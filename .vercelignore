@@ -1,0 +1,8 @@
+docs/
+.hallmark/
+.agents/
+.claude/
+.github/
+public/sites/logifuture/hero-port-v3.png
+public/sites/logifuture/hero-platform-user.png
+*.tsbuildinfo

@@ -147,10 +147,31 @@
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 html, body { overflow-x: clip; }
 body { color: var(--color-lf-ink); }
+.lf-section { padding-top: 52px; padding-bottom: 52px; }
+.lf-heading-rule { background: linear-gradient(90deg, var(--color-lf-aqua), rgb(43 211 183 / 0.1)); }
+.lf-cta { background: linear-gradient(100deg, #087fab, #0050ae 65%, #023c86); }
+.lf-eyebrow { color: var(--color-lf-blue); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+.lf-targets { background: linear-gradient(115deg, #064eb0, #073681 65%, #072657); }
+.lf-target-stat { border-radius: 8px; background: rgb(0 35 95 / 0.22); }
+.lf-ai-card { background: linear-gradient(155deg, #006bd5 0%, #004eab 45%, #072e7d 100%); box-shadow: 0 12px 28px -18px rgb(11 29 66 / 0.5); }
+.lf-ai-hub { background: radial-gradient(circle at 38% 30%, #2a7ce7, #0050ae 62%, #073888); box-shadow: inset 0 0 0 10px rgb(255 255 255 / 0.08), inset 0 0 0 13px rgb(91 165 255 / 0.45); }
+.lf-solution-hero { background: radial-gradient(ellipse at 85% 45%, #087cce 0%, #0555ac 38%, #043b8c 65%, #031e57 100%); }
+@keyframes lf-graphic-enter { from { opacity: 0; transform: translateY(24px) scale(0.97); } to { opacity: 1; transform: none; } }
+.lf-hero-graphic { animation: lf-graphic-enter 1000ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both; }
+main details[open] > :not(summary) { animation: lf-fade 220ms ease-out; }
+main h2, main h3 { overflow-wrap: normal; word-break: normal; }
+main p, footer p { text-wrap: pretty; }
+.lf-solution-hero .lf-cta { background: linear-gradient(100deg, #00a8e8, #055cff); box-shadow: 0 5px 20px -8px rgb(0 178 255 / 0.65); }
+button, a, summary { -webkit-tap-highlight-color: transparent; }
+button:not(:disabled), summary { cursor: pointer; }
+@media (min-width: 768px) { .lf-section { padding-top: 64px; padding-bottom: 64px; } }
 ::selection { background: var(--color-lf-sky); color: var(--color-lf-navy); }
 
 .lf-hero-bg { background: linear-gradient(160deg, #0a5bd6 0%, #0640b0 42%, #032677 78%, var(--color-lf-night) 100%); }
-.lf-hero-overlay { background: linear-gradient(90deg, rgb(1 16 54 / 0.92) 0%, rgb(3 32 100 / 0.78) 36%, rgb(3 32 100 / 0.25) 62%, transparent 82%), linear-gradient(0deg, rgb(1 16 54 / 0.35), transparent 40%); }
+.lf-hero-overlay { background: linear-gradient(90deg, rgb(1 16 54 / 0.92) 0%, rgb(3 32 100 / 0.8) 36%, rgb(3 32 100 / 0.25) 64%, rgb(1 16 54 / 0.12) 100%), linear-gradient(0deg, rgb(1 16 54 / 0.35), transparent 40%); }
+@media (max-width: 639px) {
+  .lf-hero-overlay { background: linear-gradient(90deg, rgb(1 16 54 / 0.94), rgb(1 16 54 / 0.68)), linear-gradient(0deg, rgb(1 16 54 / 0.4), transparent); }
+}
 @keyframes lf-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
 .lf-hero-photo { animation: lf-zoom 1600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
 /* Chữ hero hiện bằng CSS ngay khi trang mở, không chờ JS */
@@ -207,7 +228,7 @@ body { color: var(--color-lf-ink); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js [data-reveal] { opacity: 1; transform: none; transition: none; }
-  .lf-hero-photo, .lf-rise, .lf-slab, .lf-callout, .lf-float, .lf-panel, .lf-scrim, .lf-tab-panel { animation: none; }
+  .lf-hero-photo, .lf-hero-graphic, .lf-rise, .lf-slab, .lf-callout, .lf-float, .lf-panel, .lf-scrim, .lf-tab-panel, main details[open] > :not(summary) { animation: none; }
   /* Giảm chuyển động: dải logo không chạy, cuộn ngang bằng tay, bỏ bản nhân đôi */
   .lf-partner-viewport { overflow-x: auto; mask-image: none; scrollbar-width: thin; }
   .lf-partner-rail { animation: none; }
