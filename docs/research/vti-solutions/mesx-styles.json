@@ -1,0 +1,240 @@
+{
+ "body": {
+  "sel": "body",
+  "font": "\"Google Sans\"",
+  "size": "16px",
+  "weight": "400",
+  "lh": "25.6px",
+  "color": "rgb(39, 46, 78)",
+  "bg": "rgba(0, 0, 0, 0)",
+  "h": 11351,
+  "w": 1440
+ },
+ "header": {
+  "sel": "header",
+  "font": "\"Google Sans\"",
+  "size": "16px",
+  "weight": "400",
+  "lh": "25.6px",
+  "color": "rgb(39, 46, 78)",
+  "bg": "rgba(0, 0, 0, 0)",
+  "h": 60,
+  "w": 1440
+ },
+ "heads": [
+  {
+   "tag": "H1",
+   "text": "MESX – Hệ thống điều hành  sản xuất toàn diện   cho nhà máy thông minh",
+   "size": "59px",
+   "weight": "800",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 168
+  },
+  {
+   "tag": "H2",
+   "text": "Đồng hành cùng 100+ doanh nghiệp trên hành trình chuyển đổi nhà máy th",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 856
+  },
+  {
+   "tag": "H2",
+   "text": "Kiểm soát và tối ưu vận hành nhà máy trên một nền tảng thống nhất",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 1526
+  },
+  {
+   "tag": "H2",
+   "text": "Các năng lực vận hành cốt lõi trong MESX",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 2224
+  },
+  {
+   "tag": "H3",
+   "text": "MEScore - Hệ thống quản lý thực thi sản xuất",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 2395
+  },
+  {
+   "tag": "H3",
+   "text": "WMSX - Hệ thống quản lý kho thông minh",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H3",
+   "text": "MMSX - Hệ thống quản lý thiết bị & bảo trì bảo dưỡng",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H3",
+   "text": "QMSX - Hệ thống quản lý chất lượng sản xuất",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H3",
+   "text": "PMSX - Hệ thống quản lý mua hàng",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H3",
+   "text": "TMSX - Hệ thống quản lý truy xuất nguồn gốc",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H3",
+   "text": "MESX tích hợp Hệ thống IIoT Platform, Tự động hóa & Robotics",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H2",
+   "text": "Kiến trúc nền tảng kết nối từ shopfloor đến hệ thống quản trị",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 3096
+  },
+  {
+   "tag": "H2",
+   "text": "Các bài toán MESX giải quyết trong thực tế vận hành nhà máy",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 4135
+  },
+  {
+   "tag": "H2",
+   "text": "Cá nhân hóa giải pháp theo ngành dọc",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 5755
+  },
+  {
+   "tag": "H3",
+   "text": "Linh kiện điện tử",
+   "size": "30px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 6016
+  },
+  {
+   "tag": "H2",
+   "text": "Case studies",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 6763
+  },
+  {
+   "tag": "H2",
+   "text": "Tại sao nên lựa chọn MESX của VTI solutions",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 7776
+  },
+  {
+   "tag": "H2",
+   "text": "Đánh giá mức độ phù hợp của MESX với nhà máy của bạn",
+   "size": "39px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 8997
+  },
+  {
+   "tag": "H3",
+   "text": "FORM NHẬN TƯ VẤN",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  }
+ ],
+ "btns": [
+  {
+   "text": "Nhận tư vấn theo bài toán nhà máy",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "40px",
+   "pad": "22px 43px",
+   "size": "24px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%), linear-gradient(157."
+  },
+  {
+   "text": "Demo theo bài toán của bạn",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "40px",
+   "pad": "12px 23px",
+   "size": "24px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%), linear-gradient(157."
+  },
+  {
+   "text": "Demo theo bài toán của bạn",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "40px",
+   "pad": "12px 23px",
+   "size": "24px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%), linear-gradient(157."
+  },
+  {
+   "text": "Demo theo bài toán của bạn",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "40px",
+   "pad": "12px 23px",
+   "size": "24px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%), linear-gradient(157."
+  }
+ ],
+ "height": 11351
+}

@@ -21,7 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${googleSans.variable} h-full antialiased`}>
+    <html lang="vi" className={`${googleSans.variable} h-full antialiased`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

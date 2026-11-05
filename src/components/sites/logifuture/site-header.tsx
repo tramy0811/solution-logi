@@ -2,23 +2,35 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Boxes, CircleHelp, Layers, Lightbulb, Route, Workflow, type LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ConsultButton } from './consult';
 import { IMG, modules, nav } from './content';
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <span className={cn('inline-flex items-center gap-2 text-[22px] font-bold tracking-tight', light ? 'text-white' : 'text-lf-blue')}>
+    <span className={cn('inline-flex items-center gap-2 text-[22px] font-bold tracking-tight', light ? 'text-white' : 'text-lf-navy')}>
       <Image src={`${IMG}/mark.png`} alt="" width={30} height={30} priority />
       <span>
-        Logi<span className={light ? 'text-lf-aqua' : 'text-lf-cyan'}>Future</span>
+        Logi<span className={light ? 'text-lf-aqua' : 'text-lf-bright'}>Future</span>
       </span>
     </span>
   );
 }
 
-// Menu kiểu "overlay": một nút Menu mở bảng toàn màn hình, dùng chung cho desktop và mobile.
+const linkIcons: LucideIcon[] = [Lightbulb, Layers, Boxes, Workflow, Route, CircleHelp];
+
+function Burger({ open }: { open: boolean }) {
+  const bar = 'absolute left-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-300';
+  return (
+    <span className="relative block size-5" aria-hidden>
+      <span className={cn(bar, 'top-[5px]', open && 'translate-y-[4px] rotate-45')} />
+      <span className={cn(bar, 'top-[13px]', open && '-translate-y-[4px] -rotate-45')} />
+    </span>
+  );
+}
+
+// Menu: một nút mở bảng thả xuống dưới header (desktop) hoặc ngăn kéo từ phải (mobile).
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -61,91 +73,89 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className={cn('sticky top-0 z-40 bg-white transition-shadow', scrolled && 'shadow-[0_6px_20px_-12px_rgb(1_16_54/0.35)]')}>
-      <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-4 px-4 md:px-6">
+    <header className={cn('sticky top-0 z-40 border-b bg-white/95 backdrop-blur transition-colors', scrolled || open ? 'border-lf-line' : 'border-transparent')}>
+      <div className="relative z-50 mx-auto flex h-16 max-w-[1240px] items-center gap-4 bg-white/0 px-4 md:px-6">
         <a href="#top" className="rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lf-blue">
           <Logo />
         </a>
-        <div className="ml-auto flex items-center gap-2 md:gap-3">
+        <div className="ml-auto flex items-center gap-2">
           <ConsultButton className="hidden !min-h-11 !px-5 !text-[15px] sm:inline-flex">{nav.cta}</ConsultButton>
           <button
             ref={toggleRef}
             type="button"
             aria-expanded={open}
             aria-controls="lf-menu"
-            onClick={() => setOpen(true)}
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-slate-300 px-4 text-[15px] font-bold text-lf-heading transition-colors hover:border-lf-blue hover:text-lf-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lf-blue"
+            onClick={() => setOpen((o) => !o)}
+            className={cn(
+              'inline-flex min-h-11 items-center gap-2.5 rounded-xl px-4 text-[15px] font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lf-blue',
+              open ? 'bg-lf-navy text-white' : 'bg-lf-soft text-lf-navy hover:bg-lf-sky',
+            )}
           >
-            <Menu className="size-5" aria-hidden />
-            {nav.menu}
+            <Burger open={open} />
+            {open ? nav.close : nav.menu}
           </button>
         </div>
       </div>
 
-      <div
-        id="lf-menu"
-        ref={panelRef}
-        role="dialog"
-        aria-modal="true"
-        aria-label={nav.menu}
-        hidden={!open}
-        className="fixed inset-0 z-50 overflow-y-auto bg-lf-night text-white"
-      >
-        <div className="lf-hero-bg lf-grid-lines min-h-full">
-          <div className="mx-auto flex h-16 max-w-[1320px] items-center px-4 md:px-6">
-            <Logo light />
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="ml-auto inline-flex min-h-11 items-center gap-2 rounded-full border border-white/30 px-4 text-[15px] font-bold transition-colors hover:bg-white hover:text-lf-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lf-aqua"
-            >
-              <X className="size-5" aria-hidden />
-              {nav.close}
-            </button>
-          </div>
-
-          <div className="mx-auto grid max-w-[1320px] gap-10 px-4 pb-12 pt-8 md:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:pt-14">
-            <nav aria-label={nav.menu}>
-              <ol className="grid">
-                {nav.links.map((l, i) => (
-                  <li key={l.href} className="border-b border-white/15">
-                    <a
-                      href={l.href}
-                      onClick={() => setOpen(false)}
-                      className="group flex items-baseline gap-4 py-4 text-[28px] font-bold leading-tight transition-colors hover:text-lf-aqua focus-visible:text-lf-aqua focus-visible:outline-none md:text-[40px]"
-                    >
-                      <span className="w-8 text-base font-medium text-white/50 tabular-nums">{String(i + 1).padStart(2, '0')}</span>
-                      {l.label}
-                      <ArrowUpRight className="ml-auto size-6 self-center opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden />
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-
-            <div className="grid content-start gap-8">
-              <div>
-                <p className="text-sm font-medium text-white/70">{nav.modulesTitle}</p>
-                <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+      {open ? (
+        <>
+          <button type="button" aria-label={nav.close} tabIndex={-1} onClick={() => setOpen(false)} className="lf-scrim fixed inset-0 top-16 z-30 cursor-default bg-lf-night/40" />
+          <div
+            id="lf-menu"
+            ref={panelRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label={nav.menu}
+            className="lf-panel fixed bottom-0 right-0 top-16 z-40 w-[min(420px,100%)] overflow-y-auto border-l border-lf-line bg-white lg:absolute lg:bottom-auto lg:left-0 lg:w-full lg:border-l-0 lg:border-b lg:shadow-[0_24px_48px_-24px_rgb(11_29_66/0.35)]"
+          >
+            <div className="mx-auto grid max-w-[1240px] gap-6 p-4 md:p-6 lg:grid-cols-[1.5fr_1fr] lg:gap-10 lg:py-8">
+              <nav aria-label={nav.menu}>
+                <ul className="grid gap-1 lg:grid-cols-2 lg:gap-2">
+                  {nav.links.map((l, i) => {
+                    const Icon = linkIcons[i];
+                    return (
+                      <li key={l.href}>
+                        <a
+                          href={l.href}
+                          onClick={() => setOpen(false)}
+                          className="group flex items-start gap-4 rounded-xl p-3 transition-colors hover:bg-lf-soft focus-visible:bg-lf-soft focus-visible:outline-2 focus-visible:outline-lf-blue"
+                        >
+                          <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-lf-line bg-white text-lf-bright transition-colors group-hover:border-lf-bright group-hover:bg-lf-bright group-hover:text-white">
+                            <Icon className="size-5" strokeWidth={1.75} aria-hidden />
+                          </span>
+                          <span className="grid gap-0.5">
+                            <span className="font-bold text-lf-navy">{l.label}</span>
+                            <span className="text-sm leading-snug text-lf-text">{l.desc}</span>
+                          </span>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+              <div className="grid content-start gap-5 rounded-2xl bg-lf-navy p-6 text-white">
+                <div>
+                  <p className="text-lg font-bold">{nav.contactTitle}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-white/80">{nav.contactBody}</p>
+                </div>
+                <ul className="flex flex-wrap gap-1.5" aria-label={nav.modulesTitle}>
                   {modules.map((m) => (
-                    <li key={m.code} className="rounded-2xl border border-white/15 bg-white/5 px-4 py-3">
-                      <span className="block font-bold text-lf-aqua">Logi.{m.code}</span>
-                      <span className="text-sm text-white/80">{m.name}</span>
+                    <li key={m.code} className="rounded-md bg-white/10 px-2 py-1 text-xs font-medium text-white/90">
+                      Logi.{m.code}
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="rounded-3xl bg-white p-6 text-lf-ink">
-                <p className="text-xl font-bold text-lf-heading">{nav.contactTitle}</p>
-                <p className="mt-2 text-lf-text">{nav.contactBody}</p>
-                <span onClickCapture={() => setOpen(false)} className="mt-5 inline-block">
-                  <ConsultButton>{nav.cta}</ConsultButton>
+                <span onClickCapture={() => setOpen(false)}>
+                  <ConsultButton variant="white" className="w-full">
+                    {nav.cta}
+                    <ArrowRight className="size-4" aria-hidden />
+                  </ConsultButton>
                 </span>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </>
+      ) : null}
     </header>
   );
 }

@@ -24,7 +24,7 @@ export function ConsultProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function ConsultButton({ children, variant = 'gradient', className }: { children: ReactNode; variant?: 'gradient' | 'outline' | 'white'; className?: string }) {
+export function ConsultButton({ children, variant = 'gradient', className }: { children: ReactNode; variant?: 'gradient' | 'outline' | 'white' | 'ghost-light'; className?: string }) {
   const open = useContext(ConsultContext);
   return (
     <button type="button" onClick={open} className={cn(btnClass(variant), className)}>

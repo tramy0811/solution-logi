@@ -8,11 +8,12 @@ export const nav = {
   close: 'Đóng menu',
   cta: 'Đặt lịch demo',
   links: [
-    { href: '#he-sinh-thai', label: 'Hệ sinh thái' },
-    { href: '#giai-phap', label: 'Giải pháp nổi bật' },
-    { href: '#mo-hinh', label: 'Theo mô hình doanh nghiệp' },
-    { href: '#lo-trinh', label: 'Lộ trình triển khai' },
-    { href: '#hoi-dap', label: 'Hỏi đáp' },
+    { href: '#bai-toan', label: 'Bài toán', desc: 'Những điểm nghẽn LogiFuture giải quyết' },
+    { href: '#he-sinh-thai', label: 'Nền tảng', desc: 'Doanh nghiệp được gì khi dùng Logi Platform' },
+    { href: '#giai-phap', label: 'Năng lực', desc: 'CRM, FMS, TMS, WMS, hải quan, tài chính, AI' },
+    { href: '#mo-hinh', label: 'Theo mô hình', desc: 'Forwarder, vận tải, kho bãi, 3PL, hải quan' },
+    { href: '#lo-trinh', label: 'Lộ trình', desc: 'Năm giai đoạn, bắt đầu từ nền tảng' },
+    { href: '#hoi-dap', label: 'Hỏi đáp', desc: 'Những câu doanh nghiệp hay hỏi' },
   ],
   modulesTitle: 'Phân hệ Logi Platform',
   contactTitle: 'Cần tư vấn ngay?',
@@ -32,33 +33,91 @@ export const modules = [
 ];
 
 export const hero = {
-  line1: 'Nền tảng vận hành logistics toàn diện',
-  line2: 'từ báo giá đến thu tiền',
-  sub: 'Một dữ liệu chung cho bán hàng, giao nhận, vận tải, kho, hải quan và tài chính, dành cho forwarder, 3PL và doanh nghiệp vận tải.',
-  stats: [
-    { value: '9', label: 'Phân hệ nghiệp vụ' },
-    { value: '5', label: 'Ứng dụng web & di động' },
-    { value: '46', label: 'Loại chứng từ số hóa' },
-    { value: '53', label: 'Nhóm chức năng' },
+  line1: 'LogiFuture – Nền tảng vận hành logistics toàn diện',
+  line2: 'cho forwarder, 3PL và doanh nghiệp vận tải',
+  sub: 'Kết nối bán hàng, giao nhận, vận tải, kho, hải quan và tài chính trên một dữ liệu chung, từ báo giá đến thu tiền.',
+  points: ['Thay thế Excel, email và các phần mềm rời rạc', 'Giảm nhập liệu lặp lại, nắm rõ lô hàng và lãi lỗ theo từng job'],
+  cta: 'Nhận tư vấn theo bài toán của bạn',
+  secondary: 'Xem các bài toán',
+  imgAlt: 'Tàu container rời cảng',
+};
+
+export const pains = {
+  title: 'Các bài toán LogiFuture giải quyết trong vận hành logistics',
+  sub: 'Từ báo giá đến thu tiền, Logi Platform xử lý những điểm nghẽn doanh nghiệp logistics gặp hằng ngày',
+  reality: 'Thực tế',
+  solve: 'LogiFuture giải quyết',
+  result: 'Kết quả',
+  items: [
+    {
+      title: 'Báo giá chậm, giá cước nằm rải rác',
+      reality: ['Giá cước lưu trong Excel và email của từng sales', 'Lập báo giá nhiều phương án mất nhiều thời gian', 'Khó theo dõi RFQ nào đã chốt, RFQ nào trượt'],
+      solve: ['Bảng giá theo hãng, tuyến, phụ phí và hiệu lực', 'Báo giá nhiều phương án, duyệt nội bộ', 'RFQ từ CRM và Portal chuyển thẳng sang báo giá'],
+      result: 'Phản hồi khách nhanh hơn, giá thống nhất trong cả đội sales',
+    },
+    {
+      title: 'Một lô hàng, nhập liệu nhiều lần',
+      reality: ['Sales, chứng từ, điều độ, kế toán gõ lại cùng thông tin', 'Số liệu giữa các file lệch nhau', 'Mất thời gian đối chiếu trước khi xuất hóa đơn'],
+      solve: ['Job là màn hình trung tâm cho mọi bộ phận', 'Dữ liệu đi tiếp từ booking đến hóa đơn', 'Dữ liệu gốc khách hàng, hãng tàu dùng chung'],
+      result: 'Ít thao tác, ít sai sót, mọi bộ phận nhìn cùng một số liệu',
+    },
+    {
+      title: 'Không biết lô hàng và xe đang ở đâu',
+      reality: ['Điều độ gọi điện hỏi tài xế từng chuyến', 'POD giấy về văn phòng muộn nhiều ngày', 'Khách liên tục gọi hỏi tình trạng lô hàng'],
+      solve: ['Driver App cập nhật chuyến, GPS, EIR', 'POD bằng ảnh và chữ ký điện tử', 'Portal cho khách tự tra cứu và tải chứng từ'],
+      result: 'Nắm tình trạng lô hàng theo thời gian thực, giảm cuộc gọi hỏi hàng',
+    },
+    {
+      title: 'Chứng từ thất lạc, khó tra cứu',
+      reality: ['B/L, invoice, EIR nằm trên máy cá nhân và email', 'Gom bộ hồ sơ hải quan thủ công', 'Sai số liệu giữa các chứng từ phát hiện muộn'],
+      solve: ['Kho chứng từ trung tâm, OCR trích xuất trường', 'Tự gắn chứng từ vào đúng job và khách hàng', 'Kiểm tra khớp số liệu trong cùng bộ hồ sơ'],
+      result: 'Tìm chứng từ theo nội dung, bộ hồ sơ hải quan đủ và khớp',
+    },
+    {
+      title: 'Kho vận hành thủ công, tồn không chính xác',
+      reality: ['Theo dõi tồn bằng Excel và thẻ kho', 'Kiểm kê mất nhiều thời gian', 'Nhiều chủ hàng trên một kho khó tách bạch'],
+      solve: ['Tồn kho theo vị trí, lô, hạn dùng', 'Nhập, xuất, kiểm kê bằng quét mã trên Warehouse App', 'Tính phí lưu kho theo ngày hoặc pallet'],
+      result: 'Tồn kho đúng theo vị trí, nhập xuất nhanh và rõ ràng',
+    },
+    {
+      title: 'Lãi lỗ từng job chỉ biết khi quyết toán',
+      reality: ['Chi phí nhà xe, hãng tàu về muộn và rời rạc', 'Đối soát công nợ thủ công cuối tháng', 'Không biết lô nào lãi, lô nào lỗ cho đến khi khóa sổ'],
+      solve: ['Chi phí chuyến chuyển thẳng từ TMS sang Finance', 'Phải thu, phải trả, đối soát trên một hệ thống', 'Lãi lỗ theo job: dự kiến so với thực tế'],
+      result: 'Thấy lãi lỗ từng lô sớm, thu tiền đúng hạn mức',
+    },
   ],
-  cta: 'Đăng kí nhận tư vấn',
-  stack: {
-    layers: ['Hạ tầng & dữ liệu', 'Hệ thống nền', 'Ứng dụng nghiệp vụ', 'Kênh người dùng'],
-    left: ['Portal khách hàng', 'Driver App', 'Warehouse App'],
-    right: ['Logi.AI Assistant', 'FMS · TMS · WMS', 'Customs & Finance'],
-  },
+};
+
+export const capabilities = {
+  title: 'Các năng lực vận hành cốt lõi của Logi Platform',
+  result: 'Kết quả',
+  cta: 'Demo theo bài toán của bạn',
+  items: [
+    { id: 'crm', name: 'Logi.CRM – Quản lý khách hàng và RFQ', features: ['Hồ sơ khách, đầu mối, phân loại, người phụ trách', 'Tiếp nhận RFQ từ form, email và Portal', 'Hợp đồng, SLA, điều khoản thanh toán, hạn mức', 'Nhật ký chăm sóc, lịch hẹn, khiếu nại'], result: 'Không bỏ sót yêu cầu, theo dõi được tỷ lệ chốt theo sales' },
+    { id: 'fms', name: 'Logi.FMS – Báo giá, booking và job', features: ['Bảng giá cước theo hãng, tuyến, phụ phí', 'Báo giá nhiều phương án, duyệt nội bộ', 'Booking, theo dõi cut-off, ETD, ETA', 'SI, House/Master B/L draft, AWB'], result: 'Một job xuyên suốt từ báo giá đến phát hành vận đơn' },
+    { id: 'tms', name: 'Logi.TMS – Điều phối vận tải', features: ['Transport, Pickup, Delivery Order từ job', 'Gán xe, tài xế, rơ-moóc, nhà thầu phụ', 'EIR, Gate-in, Gate-out, hạn lưu bãi', 'GPS và POD có ảnh, chữ ký'], result: 'Điều xe đúng lịch, biết chuyến đang ở đâu' },
+    { id: 'wms', name: 'Logi.WMS – Quản lý kho', features: ['Nhập kho GRN, kiểm đếm, gán vị trí', 'Tồn theo vị trí, lô, hạn dùng', 'Picking, packing, gom hàng lên xe', 'Kiểm kê và điều chỉnh qua bước duyệt'], result: 'Tồn kho chính xác, xuất nhập nhanh' },
+    { id: 'customs', name: 'Logi.Customs – Khai báo và thông quan', features: ['Gom và kiểm tra bộ hồ sơ khai', 'Lập tờ khai từ dữ liệu job và chứng từ OCR', 'Gửi hải quan điện tử, khai bổ sung', 'Theo dõi giấy phép, C/O, hạn hiệu lực'], result: 'Hồ sơ đủ và khớp, theo dõi thông quan trên một màn hình' },
+    { id: 'finance', name: 'Logi.Finance – Công nợ và đối soát', features: ['Hóa đơn phải thu, Debit/Credit Note', 'Chi phí phải trả nhà xe, kho, hãng tàu', 'Thu chi và đối soát với ngân hàng', 'Lãi lỗ theo từng job'], result: 'Công nợ minh bạch, biết lãi lỗ từng lô hàng' },
+    { id: 'dms', name: 'Logi.DMS – Kho chứng từ trung tâm', features: ['Nhận chứng từ từ sáu phân hệ nghiệp vụ', 'OCR, trích xuất và phân loại 46 loại chứng từ', 'Kiểm tra khớp số liệu, lưu phiên bản', 'Phân quyền theo vai trò, job, khách hàng'], result: 'Chứng từ không thất lạc, tìm theo nội dung' },
+    { id: 'ai', name: 'Logi.Data & Logi.AI – Báo cáo và trợ lý AI', features: ['Dashboard vận hành, tài chính, bán hàng', 'Dự báo sản lượng, trễ chuyến, giá cước', 'Hỏi đáp và tìm chứng từ bằng câu hỏi thường', 'Tạo báo cáo, nhắc việc trong quy trình'], result: 'Ra quyết định dựa trên dữ liệu của cả chuỗi vận hành' },
+  ],
 };
 
 export const connect = {
-  title1: 'Kết nối sẵn với hệ sinh thái logistics',
-  title2: 'từ hãng tàu, hải quan đến ngân hàng',
-  row1: ['Hãng tàu', 'Hãng hàng không', 'Hải quan điện tử', 'Ngân hàng', 'Hóa đơn điện tử', 'Nhà xe đối tác'],
-  row2: ['EDI', 'API', 'Email & SMS', 'Định vị GPS', 'Máy quét mã vạch', 'Kho đối tác'],
+  title: 'Kết nối liền mạch với đối tác',
+  // Hiện khi chưa có logo thật trong D:\LogiFuture\solution\image\logos
+  fallback: ['Hãng tàu', 'Hãng hàng không', 'Hải quan điện tử', 'Ngân hàng', 'Hóa đơn điện tử', 'Nhà xe đối tác', 'EDI', 'API', 'Định vị GPS', 'Kho đối tác'],
 };
 
 export const ecosystem = {
-  title: 'Hệ sinh thái Logi Platform',
-  sub: 'Chín hệ thống, năm ứng dụng giao diện, chạy trên một dữ liệu chung',
+  title: 'Một nền tảng, may đo theo cách bạn vận hành',
+  sub: 'Chọn đúng phân hệ doanh nghiệp cần, cấu hình quy trình theo cách đội ngũ đang làm. Chuyên gia LogiFuture khảo sát và đề xuất lộ trình riêng cho từng doanh nghiệp.',
+  benefits: [
+    { title: 'Nhập một lần, dùng cho mọi khâu', body: 'Dữ liệu từ báo giá đi tiếp sang booking, vận tải, hải quan và hóa đơn, không gõ lại.' },
+    { title: 'Thấy cả lô hàng trên một màn hình', body: 'Màn hình job gom vận tải, kho, hải quan, tài chính và chứng từ của cùng một lô.' },
+    { title: 'Tùy biến theo nhu cầu riêng', body: 'Bật phân hệ, quy trình duyệt và phân quyền theo vai trò, job, khách hàng của bạn.' },
+  ],
   channelsTitle: 'Kênh người dùng',
   channels: [
     { name: 'Logi Workspace', who: 'Sales, chứng từ, điều phối, kế toán' },
@@ -97,104 +156,6 @@ export const ai = {
     { title: 'Tạo báo cáo tự động', body: 'Dashboard vận hành, tài chính, bán hàng được dựng từ dữ liệu của cả chín phân hệ.' },
     { title: 'Hỗ trợ quy trình', body: 'Nhắc việc, gợi ý bước tiếp theo trong job và đẩy yêu cầu duyệt đến đúng người.' },
   ],
-};
-
-export type Solution = {
-  id: string;
-  tab: string;
-  title: string;
-  desc: string;
-  points: { label: string; text: string }[];
-  screen: { title: string; rows: [string, string, string][] };
-};
-
-export const solutions = {
-  title: 'Giải pháp nổi bật',
-  detail: 'Đăng kí tư vấn',
-  demo: 'Demo tính năng',
-  sample: 'Dữ liệu mẫu',
-  prev: 'Giải pháp trước',
-  next: 'Giải pháp tiếp theo',
-  items: [
-    {
-      id: 'fms',
-      tab: 'Logi.FMS',
-      title: 'Báo giá, booking và job – Logi.FMS',
-      desc: 'Xương sống của lô hàng: từ báo giá đến mở job và phát hành vận đơn.',
-      points: [
-        { label: 'Giá cước', text: 'bảng giá theo hãng, tuyến, loại hàng, phụ phí và hiệu lực giá' },
-        { label: 'Báo giá', text: 'nhiều phương án, duyệt nội bộ, chuyển báo giá thành booking' },
-        { label: 'Job / lô hàng', text: 'FCL, LCL, Air, mốc trạng thái, doanh thu và chi phí dự kiến' },
-        { label: 'Vận đơn', text: 'SI, House/Master B/L draft, khách duyệt draft, phát hành, AWB' },
-      ],
-      screen: { title: 'Danh sách job', rows: [['SE2611-0042', 'HPH → LAX', 'Booking xác nhận'], ['SE2611-0039', 'HCM → RTM', 'Chờ SI'], ['AE2611-0011', 'HAN → NRT', 'Đã phát hành AWB'], ['SE2610-0187', 'HCM → SIN', 'Đang trên biển']] },
-    },
-    {
-      id: 'tms',
-      tab: 'Logi.TMS',
-      title: 'Điều phối vận tải – Logi.TMS',
-      desc: 'Điều phối và theo dõi vận chuyển từ lấy hàng đến giao hàng.',
-      points: [
-        { label: 'Lệnh vận chuyển', text: 'Transport, Pickup, Delivery Order từ job, ghép hoặc tách chuyến' },
-        { label: 'Điều phối', text: 'gán xe, tài xế, rơ-moóc hoặc nhà thầu, cảnh báo trùng lịch' },
-        { label: 'Container và bãi', text: 'EIR, Gate-in, Gate-out, hạn lưu bãi và lưu container' },
-        { label: 'Thực hiện chuyến', text: 'GPS từ Driver App, POD bằng ảnh và chữ ký điện tử' },
-      ],
-      screen: { title: 'Chuyến hôm nay', rows: [['T-5520', 'Kéo cont ra cảng', 'Đang chạy'], ['T-5521', 'Giao kho Bình Dương', 'Chờ xe'], ['T-5517', 'Lấy hàng KCN Tân Tạo', 'Đã POD'], ['T-5523', 'Trả rỗng depot', 'Đã gán xe']] },
-    },
-    {
-      id: 'wms',
-      tab: 'Logi.WMS',
-      title: 'Quản lý kho – Logi.WMS',
-      desc: 'Quản lý hàng vào, tồn kho và hàng ra theo từng vị trí.',
-      points: [
-        { label: 'Nhập kho', text: 'lịch hẹn nhập, GRN, kiểm đếm, kiểm chất lượng, gán vị trí' },
-        { label: 'Tồn kho', text: 'theo vị trí, lô, hạn dùng, cảnh báo tồn thấp hoặc cận hạn' },
-        { label: 'Xuất kho', text: 'Delivery Order, picking, packing, gom hàng lên xe' },
-        { label: 'Kiểm kê', text: 'stock count theo kỳ hoặc đột xuất, điều chỉnh qua bước duyệt' },
-      ],
-      screen: { title: 'Phiếu nhập GRN', rows: [['GRN-1102', 'Pallet A-01', '24 / 24'], ['GRN-1102', 'Pallet A-02', '18 / 24'], ['GRN-1103', 'Pallet B-07', '0 / 12'], ['GRN-1104', 'Thùng C-15', '40 / 40']] },
-    },
-    {
-      id: 'customs',
-      tab: 'Logi.Customs',
-      title: 'Khai báo và thông quan – Logi.Customs',
-      desc: 'Chuẩn bị hồ sơ, lập tờ khai và theo dõi kết quả thông quan.',
-      points: [
-        { label: 'Hồ sơ khai', text: 'gom Invoice, Packing List, B/L, C/O, kiểm tra đủ bộ và khớp số liệu' },
-        { label: 'Tờ khai', text: 'lập từ dữ liệu job và chứng từ đã OCR, tra mã HS, tính thuế' },
-        { label: 'Khai báo', text: 'gửi lên hải quan điện tử, nhận phản hồi, khai bổ sung' },
-        { label: 'Giấy phép và C/O', text: 'theo dõi hạn hiệu lực và nhắc gia hạn' },
-      ],
-      screen: { title: 'Tờ khai đang xử lý', rows: [['TK xuất', 'SE2611-0042', 'Luồng xanh'], ['TK nhập', 'SI2611-0015', 'Chờ phản hồi'], ['TK xuất', 'AE2611-0011', 'Đã thông quan'], ['TK nhập', 'SI2611-0018', 'Khai bổ sung']] },
-    },
-    {
-      id: 'finance',
-      tab: 'Logi.Finance',
-      title: 'Công nợ và đối soát – Logi.Finance',
-      desc: 'Hóa đơn phải thu, chi phí phải trả và lãi lỗ theo từng job.',
-      points: [
-        { label: 'Phải thu', text: 'hóa đơn AR, Debit Note, theo dõi hạn mức công nợ khách hàng' },
-        { label: 'Phải trả', text: 'chi phí nhà xe, kho, hãng tàu, Credit Note' },
-        { label: 'Đối soát', text: 'thu chi, đối soát với nhà thầu và ngân hàng' },
-        { label: 'Lãi lỗ theo job', text: 'doanh thu, chi phí thực tế so với dự kiến' },
-      ],
-      screen: { title: 'Công nợ phải thu', rows: [['INV-2611-031', 'Khách hàng mẫu A', 'Đến hạn 20/11'], ['INV-2611-027', 'Khách hàng mẫu B', 'Đã thu'], ['INV-2610-118', 'Khách hàng mẫu C', 'Quá hạn 3 ngày'], ['DN-2611-004', 'Khách hàng mẫu A', 'Chờ duyệt']] },
-    },
-    {
-      id: 'dms',
-      tab: 'Logi.DMS',
-      title: 'Kho chứng từ trung tâm – Logi.DMS',
-      desc: 'Nhận chứng từ từ sáu phân hệ nghiệp vụ, đọc, phân loại và lưu phiên bản.',
-      points: [
-        { label: 'OCR & trích xuất', text: 'đọc số B/L, số container, giá trị hóa đơn từ ảnh và PDF' },
-        { label: 'Phân loại', text: '46 loại chứng từ, tự gán vào đúng job và khách hàng' },
-        { label: 'Kiểm tra', text: 'đối chiếu số liệu giữa các chứng từ trong cùng một bộ' },
-        { label: 'Phiên bản & quyền', text: 'lịch sử sửa đổi, quyền theo vai trò, job và khách' },
-      ],
-      screen: { title: 'Chứng từ mới nhận', rows: [['House B/L draft', 'SE2611-0042', 'Đã trích xuất'], ['Commercial Invoice', 'SE2611-0042', 'Khớp số liệu'], ['POD', 'T-5517', 'Đã gắn job'], ['EIR', 'T-5520', 'Đang đọc']] },
-    },
-  ] as Solution[],
 };
 
 export const models = {
@@ -272,7 +233,6 @@ export const footer = {
     { title: 'Hỗ trợ', links: [{ href: '#lo-trinh', label: 'Lộ trình triển khai' }, { href: '#hoi-dap', label: 'Hỏi đáp' }] },
   ],
   consult: 'Đăng ký tư vấn',
-  photos: 'Ảnh (Wikimedia Commons)',
   legal: '© 2026 LogiFuture',
 };
 
@@ -302,4 +262,158 @@ export const consult = {
   notConnected: 'Chưa gửi được: biểu mẫu chưa nối với hệ thống nhận yêu cầu.',
   sent: 'Đã nhận yêu cầu. Đội LogiFuture sẽ liên hệ lại.',
   failed: 'Gửi chưa thành công. Thử lại sau một phút.',
+};
+
+// ---------- Các khối bổ sung theo trang chủ và trang sản phẩm MESX của bản gốc ----------
+// Khối có `sample: true` đang dùng NỘI DUNG MẪU: trang hiện nhãn "Nội dung mẫu" cho tới khi thay bằng dữ liệu thật.
+export const SAMPLE_LABEL = 'Nội dung mẫu';
+
+export const values = {
+  title: 'Kiểm soát và tối ưu vận hành logistics trên một nền tảng thống nhất',
+  sub: 'Logi Platform không chỉ lưu dữ liệu, mà biến dữ liệu thành khả năng điều hành thực tế, từ bán hàng, giao nhận, vận tải, kho đến tài chính.',
+  items: [
+    { title: 'Nhìn thấy toàn bộ vận hành theo thời gian thực', body: 'Theo dõi job, chuyến xe, tồn kho, tờ khai và công nợ tại mọi thời điểm' },
+    { title: 'Kiểm soát quy trình, giảm sai lệch', body: 'Quy trình duyệt, nhắc việc và phân quyền theo đúng cách doanh nghiệp vận hành' },
+    { title: 'Tối ưu chi phí theo từng lô hàng', body: 'Doanh thu, chi phí thực tế và lãi lỗ theo job, theo khách, theo tuyến' },
+    { title: 'Chuẩn hóa và mở rộng nhiều chi nhánh', body: 'Một dữ liệu gốc, một quy trình chuẩn cho mọi văn phòng và kho' },
+  ],
+};
+
+export const architecture = {
+  title: 'Kiến trúc nền tảng kết nối từ hiện trường đến hệ thống quản trị',
+  sub: 'Logi Platform xây trên kiến trúc mở: ứng dụng hiện trường, phân hệ nghiệp vụ, hệ thống nền và dữ liệu nằm trong một luồng thống nhất, kết nối đối tác qua một cổng tích hợp.',
+  side: 'Tầng vận hành logistics',
+  loop: 'Dữ liệu khép kín',
+  layers: [
+    { name: 'Kênh người dùng', items: ['Logi Workspace', 'Customer & Partner Portal', 'Driver App', 'Warehouse App', 'Manager App'] },
+    { name: 'Ứng dụng nghiệp vụ', items: ['CRM', 'FMS', 'TMS', 'WMS', 'Customs', 'Finance'] },
+    { name: 'Hệ thống nền', items: ['DMS', 'SSO', 'Phân quyền', 'Dữ liệu gốc', 'Workflow', 'Event bus', 'Cổng tích hợp'] },
+    { name: 'Dữ liệu & AI', items: ['Lakehouse', 'Data Mart', 'BI', 'Dự báo', 'Logi.AI Assistant'] },
+  ],
+  partners: 'Đối tác bên ngoài: hãng tàu, hãng bay, hải quan điện tử, ngân hàng, hóa đơn điện tử',
+};
+
+export const modelExtras = {
+  clientsLabel: 'Khách hàng của LogiFuture',
+  story: 'Câu chuyện thành công',
+  screenA: { title: 'Danh sách job', rows: [['SE2611-0042', 'Booking xác nhận'], ['SE2611-0039', 'Chờ SI'], ['AE2611-0011', 'Đã phát hành AWB']] },
+  screenB: { title: 'Chuyến hôm nay', rows: [['T-5520', 'Đang chạy'], ['T-5521', 'Chờ xe'], ['T-5517', 'Đã POD']] },
+};
+
+export const cases = {
+  title: 'Case studies',
+  sample: true,
+  labels: { context: 'Bối cảnh', problem: 'Vấn đề vận hành', solution: 'Giải pháp áp dụng', change: 'Thay đổi vận hành', outcome: 'Outcome', result: 'Kết quả' },
+  more: 'Xem thêm case studies',
+  prev: 'Case study trước',
+  next: 'Case study tiếp theo',
+  items: [
+    {
+      title: 'Chuẩn hóa quy trình báo giá và booking cho forwarder đường biển',
+      img: 'container-ship.webp',
+      context: ['Ngành: giao nhận đường biển', 'Quy mô: [điền số nhân sự]', 'Đặc thù: nhiều tuyến, nhiều hãng tàu'],
+      problem: ['Giá cước nằm trong Excel và email', 'Báo giá chậm, khó theo dõi tỷ lệ chốt', 'Booking và B/L nhập lại nhiều lần'],
+      solution: ['Logi.CRM', 'Logi.FMS', 'Logi.DMS'],
+      change: ['Bảng giá tập trung theo hãng, tuyến, phụ phí', 'RFQ chuyển thẳng thành báo giá và booking', 'B/L draft sinh từ dữ liệu job'],
+      outcome: ['Một job xuyên suốt từ báo giá đến vận đơn'],
+      result: ['[Điền kết quả đo được, ví dụ thời gian lập báo giá]', '[Điền kết quả thứ hai]', 'Số liệu thống nhất giữa sales và chứng từ'],
+    },
+    {
+      title: 'Điều phối đội xe container và POD điện tử',
+      img: 'container-truck.webp',
+      context: ['Ngành: vận tải container nội địa', 'Quy mô: [điền số đầu kéo]', 'Đặc thù: nhiều nhà thầu phụ'],
+      problem: ['Điều độ qua điện thoại và nhóm chat', 'POD giấy về văn phòng chậm', 'Đối soát chi phí chuyến thủ công'],
+      solution: ['Logi.TMS', 'Driver App', 'Logi.Finance'],
+      change: ['Lệnh vận chuyển sinh từ job', 'Tài xế cập nhật GPS, EIR, POD trên app', 'Chi phí chuyến chuyển thẳng sang đối soát'],
+      outcome: ['Biết chuyến đang ở đâu, POD về ngay khi giao xong'],
+      result: ['[Điền kết quả đo được]', '[Điền kết quả thứ hai]', 'Đối soát nhà thầu trên một hệ thống'],
+    },
+    {
+      title: 'Số hóa kho nhiều chủ hàng cho doanh nghiệp 3PL',
+      img: 'automated-warehouse.webp',
+      context: ['Ngành: kho bãi, 3PL', 'Quy mô: [điền diện tích, số chủ hàng]', 'Đặc thù: nhiều chủ hàng trên một kho'],
+      problem: ['Tồn kho theo dõi bằng Excel', 'Kiểm kê mất nhiều ngày', 'Tính phí lưu kho thủ công'],
+      solution: ['Logi.WMS', 'Warehouse App', 'Logi.Finance'],
+      change: ['Tồn theo vị trí, lô, hạn dùng, từng chủ hàng', 'Nhập xuất, kiểm kê bằng quét mã', 'Phí lưu kho tính tự động theo ngày hoặc pallet'],
+      outcome: ['Tồn kho đúng theo vị trí, hóa đơn kho đúng hạn'],
+      result: ['[Điền kết quả đo được]', '[Điền kết quả thứ hai]', 'Mỗi chủ hàng tự xem tồn trên Portal'],
+    },
+  ],
+};
+
+export const whyHub = {
+  title: 'Điểm khác biệt của Logi Platform',
+  imgAlt: 'Sơ đồ LogiFuture Platform kết nối toàn bộ chuỗi logistics: AI và phân tích dữ liệu, chất lượng, máy móc và thiết bị, kho, năng lượng, sản xuất',
+  nodes: ['Bán hàng', 'Giao nhận', 'Vận tải', 'Kho bãi', 'Hải quan', 'Tài chính'],
+  cards: [
+    { title: 'Kiến trúc mở, tích hợp linh hoạt', body: 'Kết nối hãng tàu, hải quan, ngân hàng và phần mềm hiện có qua một cổng tích hợp, không phải thay toàn bộ hệ thống.' },
+    { title: 'Dữ liệu sẵn sàng cho AI', body: 'Chứng từ được OCR, dữ liệu chuẩn hóa từ đầu để báo cáo, dự báo và trợ lý AI dùng ngay.' },
+    { title: 'Triển khai theo từng giai đoạn', body: 'Bắt đầu từ bài toán trọng tâm, mở rộng theo lộ trình năm giai đoạn, vận hành không gián đoạn.' },
+    { title: 'Tùy biến theo mô hình', body: 'Forwarder, 3PL hay cả hai: quy trình, phân quyền và màn hình cấu hình theo cách doanh nghiệp làm.' },
+  ],
+  prev: 'Lý do trước',
+  next: 'Lý do tiếp theo',
+};
+
+export const awards = {
+  title: 'Giải thưởng',
+  sample: true,
+  items: [
+    { name: '[Tên giải thưởng]', org: '[Đơn vị trao giải]', year: '[Năm]' },
+    { name: '[Tên giải thưởng]', org: '[Đơn vị trao giải]', year: '[Năm]' },
+    { name: '[Tên chứng nhận]', org: '[Đơn vị cấp]', year: '[Năm]' },
+  ],
+};
+
+export const press = {
+  title: 'Báo chí nói gì về LogiFuture?',
+  sample: true,
+  items: [
+    { title: '[Tiêu đề bài báo nổi bật về LogiFuture]', source: '[Tên báo]', img: 'singapore-harbour.webp', lead: true },
+    { title: '[Tiêu đề bài báo]', source: '[Tên báo]', img: 'container-ship.webp' },
+    { title: '[Tiêu đề bài báo]', source: '[Tên báo]', img: 'containers-stacked.webp' },
+  ],
+};
+
+export const posts = {
+  title: 'Kiến thức chuyên sâu',
+  sample: true,
+  more: 'Đọc thêm',
+  items: [
+    { title: 'FMS là gì? Phần mềm quản lý giao nhận cho forwarder', date: '[Ngày đăng]', cat: 'Quản trị logistics', img: 'container-ship.webp' },
+    { title: 'TMS và bài toán điều phối đội xe container', date: '[Ngày đăng]', cat: 'Vận tải', img: 'container-truck.webp' },
+    { title: 'Số hóa chứng từ logistics bằng OCR', date: '[Ngày đăng]', cat: 'Chuyển đổi số', img: 'customs-inspection.webp' },
+    { title: 'WMS cho kho nhiều chủ hàng: những điểm cần lưu ý', date: '[Ngày đăng]', cat: 'Kho bãi', img: 'automated-warehouse.webp' },
+    { title: 'Lãi lỗ theo job: vì sao forwarder cần theo dõi sớm', date: '[Ngày đăng]', cat: 'Tài chính', img: 'singapore-harbour.webp' },
+  ],
+};
+
+export const assess = {
+  title: 'Đánh giá mức độ phù hợp của Logi Platform với doanh nghiệp của bạn',
+  sub: 'Nhận tư vấn dựa trên hệ thống hiện tại và bài toán vận hành thực tế của doanh nghiệp bạn',
+  checks: ['Phân tích hiện trạng hệ thống (Excel, phần mềm kế toán, TMS...)', 'Đề xuất lộ trình triển khai phù hợp', 'Demo theo bài toán thực tế'],
+  clients: 'Đồng hành cùng doanh nghiệp logistics trên hành trình chuyển đổi số',
+  form: {
+    name: 'Họ và tên', namePh: 'Nhập tên của bạn',
+    company: 'Tên doanh nghiệp', companyPh: 'Nhập tên doanh nghiệp',
+    role: 'Chức danh / vị trí công việc', rolePh: 'Chọn chức danh / vị trí',
+    roles: ['Chủ doanh nghiệp / Giám đốc', 'Trưởng phòng vận hành', 'Trưởng phòng kinh doanh', 'Kế toán / Tài chính', 'IT / Chuyển đổi số', 'Khác'],
+    email: 'Email', emailPh: 'VD: ten@congty.vn',
+    phone: 'Số điện thoại', phonePh: 'Nhập số điện thoại',
+    topic: 'Bài toán bạn đang quan tâm', topicPh: 'Lựa chọn giải pháp bạn quan tâm',
+    need: 'Nhu cầu cụ thể', needPh: 'Mô tả nhu cầu, mục tiêu và phạm vi triển khai',
+    submit: 'Nhận tư vấn & demo miễn phí',
+  },
+};
+
+export const offices = {
+  sample: true,
+  hotlineLabel: 'Hotline',
+  items: [
+    { name: 'Trụ sở chính', hotline: '[Số hotline]', address: '[Địa chỉ trụ sở chính]' },
+    { name: 'Chi nhánh TP HCM', hotline: '[Số hotline]', address: '[Địa chỉ chi nhánh]' },
+  ],
+  company: 'Công ty [tên pháp lý của LogiFuture]',
+  privacy: 'Chính sách bảo mật',
+  connect: 'Kết nối với chúng tôi',
 };

@@ -2,10 +2,24 @@
 
 import Image from 'next/image';
 import { useRef, useState, type KeyboardEvent } from 'react';
-import { ArrowRight, Check, ChevronLeft, ChevronRight, Plane, Ship, ShieldCheck, Truck, Warehouse, Boxes, type LucideIcon } from 'lucide-react';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Boxes,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  CircleCheck,
+  Plane,
+  ShieldCheck,
+  Ship,
+  Truck,
+  Warehouse,
+  type LucideIcon,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ConsultButton } from './consult';
-import { IMG, models, rollout, solutions } from './content';
+import { capabilities, cases, IMG, modelExtras, models, rollout, SAMPLE_LABEL, whyHub } from './content';
 import { SectionTitle } from './section-title';
 
 function useTabs(count: number) {
@@ -16,9 +30,11 @@ function useTabs(count: number) {
     setActive(n);
     if (focus) refs.current[n]?.focus();
   };
-  const onKey = (e: KeyboardEvent) => {
-    if (e.key === 'ArrowRight') go(active + 1, true);
-    else if (e.key === 'ArrowLeft') go(active - 1, true);
+  const onKey = (e: KeyboardEvent, vertical = false) => {
+    const next = vertical ? 'ArrowDown' : 'ArrowRight';
+    const prev = vertical ? 'ArrowUp' : 'ArrowLeft';
+    if (e.key === next) go(active + 1, true);
+    else if (e.key === prev) go(active - 1, true);
     else if (e.key === 'Home') go(0, true);
     else if (e.key === 'End') go(count - 1, true);
     else return;
@@ -28,110 +44,60 @@ function useTabs(count: number) {
 }
 
 const arrowBtn =
-  'grid size-11 shrink-0 place-items-center rounded-full border border-slate-200 bg-white text-lf-heading shadow-sm transition-colors hover:border-lf-blue hover:text-lf-blue focus-visible:outline-2 focus-visible:outline-lf-blue';
+  'grid size-11 shrink-0 place-items-center rounded-full border border-lf-line bg-white text-lf-navy transition-colors hover:border-lf-bright hover:text-lf-bright focus-visible:outline-2 focus-visible:outline-lf-blue disabled:cursor-not-allowed disabled:opacity-40';
 
-/* ---------- Giải pháp nổi bật ---------- */
-export function SolutionsTabs() {
-  const items = solutions.items;
+const tabBtn = (on: boolean) =>
+  cn(
+    'rounded-xl border text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lf-blue',
+    on ? 'border-lf-navy bg-lf-navy text-white' : 'border-lf-line bg-white text-lf-navy hover:border-lf-bright hover:text-lf-bright',
+  );
+
+/* ---------- Năng lực vận hành cốt lõi: danh sách trái, chi tiết phải ---------- */
+export function Capabilities() {
+  const items = capabilities.items;
   const { active, go, refs, onKey } = useTabs(items.length);
-  const s = items[active];
+  const c = items[active];
   return (
-    <section id="giai-phap" className="relative overflow-hidden bg-[linear-gradient(180deg,#eef5ff_0%,#ffffff_70%)] px-4 py-16 md:px-6 md:py-24" aria-labelledby="sol-h">
-      <SectionTitle id="sol-h" title={solutions.title} />
-      <div role="tablist" aria-label={solutions.title} onKeyDown={onKey} className="lf-no-scrollbar mx-auto mt-10 flex max-w-[1100px] gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-6">
-        {items.map((it, i) => (
-          <button
-            key={it.id}
-            ref={(el) => {
-              refs.current[i] = el;
-            }}
-            role="tab"
-            id={`sol-tab-${it.id}`}
-            aria-selected={i === active}
-            aria-controls="sol-panel"
-            tabIndex={i === active ? 0 : -1}
-            onClick={() => go(i)}
-            className={cn(
-              'min-h-14 shrink-0 rounded-lg border bg-white px-5 text-lg font-bold italic tracking-tight transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lf-blue md:px-2',
-              i === active ? 'border-lf-blue bg-[#eef5ff] text-lf-blue' : 'border-slate-200 text-[#e08a1e] hover:border-lf-blue/50',
-            )}
-          >
-            {it.tab}
-          </button>
-        ))}
-      </div>
-
-      <div className="mx-auto mt-8 flex max-w-[1240px] items-center gap-4">
-        <button type="button" onClick={() => go(active - 1)} aria-label={solutions.prev} className={cn(arrowBtn, 'hidden md:grid')}>
-          <ChevronLeft className="size-5" aria-hidden />
-        </button>
-        <div
-          id="sol-panel"
-          role="tabpanel"
-          aria-labelledby={`sol-tab-${s.id}`}
-          className="grid flex-1 gap-8 rounded-3xl bg-white p-6 shadow-[0_20px_60px_-30px_rgb(1_16_54/0.45)] md:p-10 lg:grid-cols-[1.1fr_1fr]"
-        >
-          <div>
-            <h3 className="text-2xl font-bold text-lf-blue md:text-[30px]">{s.title}</h3>
-            <p className="mt-4 leading-[1.9] text-lf-text">{s.desc}</p>
-            <ul className="mt-4 grid gap-3">
-              {s.points.map((p) => (
-                <li key={p.label} className="flex gap-3 leading-[1.8] text-lf-text">
-                  <span className="mt-2 size-3 shrink-0 rounded-[3px] bg-lf-blue" aria-hidden />
-                  <span>
-                    <b className="font-medium text-lf-ink">{p.label}:</b> {p.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ConsultButton>{solutions.detail}</ConsultButton>
-              <ConsultButton variant="outline">{solutions.demo}</ConsultButton>
-            </div>
-          </div>
-          <figure className="m-0 self-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_16px_40px_-24px_rgb(1_16_54/0.5)]">
-            <div className="flex items-center justify-between bg-lf-blue px-4 py-3 text-white">
-              <span className="font-bold">{s.tab}</span>
-              <span className="text-xs text-white/80">{solutions.sample}</span>
-            </div>
-            <div className="grid grid-cols-[96px_1fr]">
-              <ul className="grid content-start gap-1 bg-[#0b4fb0] p-2 text-xs text-white/85">
-                {['Tổng quan', 'Danh sách', 'Báo cáo', 'Thiết lập'].map((m, i) => (
-                  <li key={m} className={cn('rounded px-2 py-1.5', i === 1 && 'bg-white/15 font-bold text-white')}>
-                    {m}
-                  </li>
-                ))}
-              </ul>
-              <div className="p-4">
-                <p className="text-base font-bold text-lf-heading">{s.screen.title}</p>
-                <table className="mt-3 w-full text-left text-[13px]">
-                  <tbody>
-                    {s.screen.rows.map((r) => (
-                      <tr key={r[0] + r[1]} className="border-t border-slate-100">
-                        <th scope="row" className="py-2 pr-2 font-bold text-lf-ink">
-                          {r[0]}
-                        </th>
-                        <td className="py-2 pr-2 text-lf-text">{r[1]}</td>
-                        <td className="py-2 text-right font-medium text-lf-blue">{r[2]}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </figure>
+    <section id="giai-phap" className="px-4 py-14 md:px-6 md:py-20" aria-labelledby="cap-h">
+      <SectionTitle id="cap-h" title={capabilities.title} />
+      <div className="mx-auto mt-10 grid max-w-[1240px] gap-5 rounded-3xl bg-lf-soft p-4 md:p-6 lg:grid-cols-[0.85fr_1.15fr]" data-reveal>
+        <div role="tablist" aria-orientation="vertical" aria-label={capabilities.title} onKeyDown={(e) => onKey(e, true)} className="lf-no-scrollbar flex gap-2 overflow-x-auto lg:grid lg:content-start lg:overflow-visible">
+          {items.map((it, i) => (
+            <button
+              key={it.id}
+              ref={(el) => {
+                refs.current[i] = el;
+              }}
+              role="tab"
+              id={`cap-tab-${it.id}`}
+              aria-selected={i === active}
+              aria-controls="cap-panel"
+              tabIndex={i === active ? 0 : -1}
+              onClick={() => go(i)}
+              className={cn(tabBtn(i === active), 'min-h-12 shrink-0 px-4 py-3 text-[15px] font-bold leading-snug lg:w-full')}
+            >
+              {it.name}
+            </button>
+          ))}
         </div>
-        <button type="button" onClick={() => go(active + 1)} aria-label={solutions.next} className={cn(arrowBtn, 'hidden md:grid')}>
-          <ChevronRight className="size-5" aria-hidden />
-        </button>
-      </div>
-      <div className="mt-6 flex justify-center gap-3 md:hidden">
-        <button type="button" onClick={() => go(active - 1)} aria-label={solutions.prev} className={arrowBtn}>
-          <ChevronLeft className="size-5" aria-hidden />
-        </button>
-        <button type="button" onClick={() => go(active + 1)} aria-label={solutions.next} className={arrowBtn}>
-          <ChevronRight className="size-5" aria-hidden />
-        </button>
+        <div id="cap-panel" key={c.id} role="tabpanel" aria-labelledby={`cap-tab-${c.id}`} className="lf-tab-panel rounded-2xl bg-white p-6 md:p-8">
+          <h3 className="text-xl font-bold leading-snug text-lf-navy md:text-2xl">{c.name}</h3>
+          <ul className="mt-5 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+            {c.features.map((f) => (
+              <li key={f} className="flex gap-2.5 leading-relaxed text-lf-text">
+                <ArrowRight className="mt-1 size-4 shrink-0 rounded-full bg-lf-bright p-0.5 text-white" aria-hidden />
+                {f}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 flex gap-2 leading-relaxed text-lf-text">
+            <CircleCheck className="mt-0.5 size-5 shrink-0 text-emerald-600" aria-hidden />
+            <span>
+              <b className="text-lf-navy">{capabilities.result}:</b> {c.result}
+            </span>
+          </p>
+          <ConsultButton className="mt-7">{capabilities.cta}</ConsultButton>
+        </div>
       </div>
     </section>
   );
@@ -140,12 +106,28 @@ export function SolutionsTabs() {
 /* ---------- Theo mô hình doanh nghiệp ---------- */
 const modelIcons: LucideIcon[] = [Ship, Plane, Truck, Warehouse, Boxes, ShieldCheck];
 
-export function ModelsTabs() {
+function MiniScreen({ title, rows, className }: { title: string; rows: string[][]; className?: string }) {
+  return (
+    <div className={cn('w-[190px] overflow-hidden rounded-xl border border-lf-line bg-white text-[11px] shadow-[0_18px_36px_-18px_rgb(11_29_66/0.55)]', className)} aria-hidden>
+      <p className="bg-lf-navy px-3 py-1.5 font-bold text-white">{title}</p>
+      <ul className="px-3 py-1">
+        {rows.map((r) => (
+          <li key={r[0]} className="flex justify-between gap-2 border-b border-lf-line py-1.5 last:border-0">
+            <b className="text-lf-navy">{r[0]}</b>
+            <span className="text-lf-bright">{r[1]}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function ModelsTabs({ photos = [], logos = [] }: { photos?: string[]; logos?: { src: string; name: string }[] }) {
   const items = models.items;
   const { active, go, refs, onKey } = useTabs(items.length);
   const m = items[active];
   return (
-    <section id="mo-hinh" className="px-4 py-16 md:px-6 md:py-20" aria-labelledby="models-h">
+    <section id="mo-hinh" className="px-4 py-14 md:px-6 md:py-20" aria-labelledby="models-h">
       <SectionTitle
         id="models-h"
         title={models.title}
@@ -156,11 +138,11 @@ export function ModelsTabs() {
           </>
         }
       />
-      <div className="mx-auto mt-10 flex max-w-[1100px] items-center gap-3">
+      <div className="mx-auto mt-8 flex max-w-[1100px] items-center gap-3">
         <button type="button" onClick={() => go(active - 1)} aria-label="Mô hình trước" className={cn(arrowBtn, 'hidden sm:grid')}>
           <ChevronLeft className="size-5" aria-hidden />
         </button>
-        <div role="tablist" aria-label={models.title} onKeyDown={onKey} className="lf-no-scrollbar flex flex-1 gap-3 overflow-x-auto pb-2">
+        <div role="tablist" aria-label={models.title} onKeyDown={(e) => onKey(e)} className="lf-no-scrollbar flex flex-1 gap-2 overflow-x-auto pb-1">
           {items.map((it, i) => {
             const Icon = modelIcons[i];
             return (
@@ -175,10 +157,7 @@ export function ModelsTabs() {
                 aria-controls="model-panel"
                 tabIndex={i === active ? 0 : -1}
                 onClick={() => go(i)}
-                className={cn(
-                  'flex min-h-14 shrink-0 items-center gap-3 rounded-lg border px-4 text-left text-[15px] leading-tight transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lf-blue',
-                  i === active ? 'border-lf-blue bg-[#eef5ff] text-lf-blue' : 'border-slate-200 bg-white text-lf-ink hover:border-lf-blue/50',
-                )}
+                className={cn(tabBtn(i === active), 'flex min-h-14 shrink-0 items-center gap-2.5 px-4 text-[15px] font-medium leading-tight')}
               >
                 <Icon className="size-6 shrink-0" strokeWidth={1.5} aria-hidden />
                 {it.tab}
@@ -191,13 +170,17 @@ export function ModelsTabs() {
         </button>
       </div>
 
-      <div id="model-panel" role="tabpanel" aria-labelledby={`model-tab-${m.id}`} className="mx-auto mt-8 grid max-w-[900px] items-center gap-8 md:grid-cols-2">
-        <div className="relative aspect-[4/3.3] overflow-hidden rounded-2xl shadow-[0_20px_50px_-24px_rgb(1_16_54/0.55)]">
-          <Image src={`${IMG}/${m.img}`} alt={m.alt} fill sizes="(min-width: 768px) 450px, 100vw" className="object-cover" />
+      <div id="model-panel" key={m.id} role="tabpanel" aria-labelledby={`model-tab-${m.id}`} className="lf-tab-panel mx-auto mt-8 grid max-w-[1040px] items-center gap-10 md:grid-cols-2">
+        <div className="relative px-6 pb-8 sm:px-10">
+          <div className="relative aspect-[4/3.4] overflow-hidden rounded-2xl">
+            <Image src={photos[active] ?? `${IMG}/${m.img}`} alt={m.alt} fill sizes="(min-width: 768px) 460px, 100vw" className="object-cover" />
+          </div>
+          <MiniScreen title={modelExtras.screenA.title} rows={modelExtras.screenA.rows} className="absolute -left-1 top-6 hidden sm:block" />
+          <MiniScreen title={modelExtras.screenB.title} rows={modelExtras.screenB.rows} className="absolute -right-1 bottom-0" />
         </div>
         <div>
-          <h3 className="text-2xl font-bold text-lf-heading">{m.tab}</h3>
-          <ul className="mt-4 grid gap-4 rounded-2xl border border-lf-blue/60 p-5">
+          <h3 className="text-2xl font-bold text-lf-navy">{m.tab}</h3>
+          <ul className="mt-4 grid gap-4 rounded-2xl border border-lf-bright/40 p-5">
             {m.points.map((p) => (
               <li key={p} className="flex gap-3 leading-relaxed text-lf-text">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-lf-bright text-white">
@@ -210,6 +193,25 @@ export function ModelsTabs() {
           <p className="mt-4 text-sm text-lf-text">
             {models.using}: <b className="text-lf-blue">{m.mods}</b>
           </p>
+          <p className="mt-5 text-sm font-medium text-lf-navy">{modelExtras.clientsLabel}</p>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {logos.length
+              ? logos.slice(0, 5).map((l) => (
+                  <li key={l.src} className="lf-logo-item grid h-10 w-24 place-items-center rounded-lg border border-lf-line bg-white px-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={l.src} alt={l.name} className="lf-logo max-h-6 max-w-full object-contain" loading="lazy" />
+                  </li>
+                ))
+              : [0, 1, 2].map((i) => (
+                  <li key={i} className="grid h-10 w-24 place-items-center rounded-lg border border-dashed border-amber-500 text-[11px] text-amber-700">
+                    Logo khách hàng
+                  </li>
+                ))}
+          </ul>
+          <a href="#case-studies" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-lf-bright underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-lf-blue">
+            {modelExtras.story}
+            <ArrowUpRight className="size-4" aria-hidden />
+          </a>
         </div>
       </div>
       <div className="mt-10 text-center">
@@ -219,8 +221,103 @@ export function ModelsTabs() {
   );
 }
 
+/* ---------- Case studies ---------- */
+export function CaseStudies({ photos = [] }: { photos?: string[] }) {
+  const [i, setI] = useState(0);
+  const n = cases.items.length;
+  const c = cases.items[i];
+  const L = cases.labels;
+  const block = (title: string, list: string[], ok = false) => (
+    <div>
+      <p className="flex items-center gap-1.5 font-bold text-lf-navy">
+        {ok ? <CircleCheck className="size-4 text-emerald-600" aria-hidden /> : null}
+        {title}
+      </p>
+      <ul className="mt-2 grid gap-1.5">
+        {list.map((x) => (
+          <li key={x} className="flex gap-2 text-[15px] leading-relaxed text-lf-text">
+            <span className="mt-2 size-2 shrink-0 rounded-[2px] bg-lf-bright" aria-hidden />
+            {x}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+  return (
+    <section id="case-studies" className="bg-[linear-gradient(180deg,#ffffff,#f1f6ff)] px-4 py-14 md:px-6 md:py-20" aria-labelledby="cases-h">
+      <SectionTitle id="cases-h" title={cases.title} />
+      <p className="mx-auto mt-3 w-fit rounded-full border border-dashed border-amber-500 px-3 py-1 text-xs font-medium text-amber-700">{SAMPLE_LABEL}: thay bằng dự án thật trong content.ts</p>
+      <article key={i} className="lf-tab-panel mx-auto mt-8 grid max-w-[1100px] overflow-hidden rounded-3xl border border-lf-line bg-white lg:grid-cols-[1fr_1fr_0.85fr]" aria-live="polite">
+        <div className="grid content-start gap-5 p-6 md:p-8">
+          <h3 className="text-xl font-bold leading-snug text-lf-blue">{c.title}</h3>
+          {block(L.context, c.context)}
+          {block(L.problem, c.problem)}
+          {block(L.solution, c.solution)}
+        </div>
+        <div className="grid content-start gap-5 bg-lf-soft p-6 md:p-8">
+          {block(L.change, c.change)}
+          {block(L.outcome, c.outcome)}
+          {block(L.result, c.result, true)}
+        </div>
+        <div className="relative min-h-[260px]">
+          <Image src={photos[i] ?? `${IMG}/${c.img}`} alt="" fill sizes="(min-width: 1024px) 360px, 100vw" className="object-cover" />
+        </div>
+      </article>
+      <div className="mx-auto mt-6 flex max-w-[1100px] items-center gap-4">
+        <button type="button" onClick={() => setI((i - 1 + n) % n)} aria-label={cases.prev} className={arrowBtn}>
+          <ChevronLeft className="size-5" aria-hidden />
+        </button>
+        <button type="button" onClick={() => setI((i + 1) % n)} aria-label={cases.next} className={arrowBtn}>
+          <ChevronRight className="size-5" aria-hidden />
+        </button>
+        <span className="relative h-0.5 flex-1 overflow-hidden rounded bg-lf-line" aria-hidden>
+          <span className="absolute inset-y-0 left-0 w-full origin-left bg-lf-bright transition-transform duration-500" style={{ transform: `scaleX(${(i + 1) / n})` }} />
+        </span>
+        <span className="text-sm tabular-nums text-lf-text">
+          {i + 1} / {n}
+        </span>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Tại sao chọn: sơ đồ trung tâm + thẻ trượt ---------- */
+
+export function WhyHub() {
+  const [start, setStart] = useState(0);
+  const cards = whyHub.cards;
+  const visible = [0, 1, 2].map((k) => cards[(start + k) % cards.length]);
+  return (
+    <section className="px-4 py-14 md:px-6 md:py-20" aria-labelledby="hub-h">
+      <SectionTitle id="hub-h" title={whyHub.title} />
+      <div className="relative mx-auto mt-10 aspect-[3/2] w-full max-w-[900px] overflow-hidden rounded-3xl bg-lf-night" data-reveal>
+        <Image src={`${IMG}/platform-hub.webp`} alt={whyHub.imgAlt} fill sizes="(min-width: 960px) 900px, 100vw" className="object-cover" />
+      </div>
+      <div className="mx-auto mt-10 flex max-w-[1240px] items-center gap-3">
+        <button type="button" onClick={() => setStart((start - 1 + cards.length) % cards.length)} aria-label={whyHub.prev} className={cn(arrowBtn, 'hidden md:grid')}>
+          <ChevronLeft className="size-5" aria-hidden />
+        </button>
+        <ul className="grid flex-1 gap-4 md:grid-cols-3" aria-live="polite">
+          {visible.map((c, k) => (
+            <li key={c.title} className={cn('lf-tab-panel rounded-2xl bg-lf-navy p-6 text-white', k === 1 && 'md:-translate-y-2')}>
+              <p className="flex items-start gap-2.5 font-bold text-lf-aqua">
+                <Check className="mt-0.5 size-5 shrink-0 rounded-full bg-lf-bright p-0.5 text-white" aria-hidden />
+                {c.title}
+              </p>
+              <p className="mt-3 leading-relaxed text-white/85">{c.body}</p>
+            </li>
+          ))}
+        </ul>
+        <button type="button" onClick={() => setStart((start + 1) % cards.length)} aria-label={whyHub.next} className={cn(arrowBtn, 'hidden md:grid')}>
+          <ChevronRight className="size-5" aria-hidden />
+        </button>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Lộ trình (carousel) ---------- */
-export function RolloutCarousel() {
+export function RolloutCarousel({ photos = [] }: { photos?: string[] }) {
   const track = useRef<HTMLUListElement>(null);
   const [page, setPage] = useState(0);
   const step = (dir: number) => {
@@ -236,7 +333,7 @@ export function RolloutCarousel() {
     setPage(max <= 0 ? 0 : Math.round((el.scrollLeft / max) * (rollout.items.length - 1)));
   };
   return (
-    <section id="lo-trinh" className="px-4 pb-16 pt-28 md:px-6 md:pb-24 md:pt-36" aria-labelledby="roll-h">
+    <section id="lo-trinh" className="bg-lf-soft px-4 py-14 md:px-6 md:py-20" aria-labelledby="roll-h">
       <SectionTitle
         id="roll-h"
         title={rollout.title}
@@ -247,17 +344,16 @@ export function RolloutCarousel() {
           </>
         }
       />
-      <div className="relative mx-auto mt-10 max-w-[1100px]">
+      <div className="relative mx-auto mt-8 max-w-[1100px]">
         <ul ref={track} onScroll={onScroll} tabIndex={0} aria-label={rollout.title} className="lf-no-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lf-blue">
-          {rollout.items.map((r) => (
-            <li key={r.phase} className="w-[85%] shrink-0 snap-start overflow-hidden rounded-xl bg-lf-blue sm:w-[calc((100%-20px)/2)] lg:w-[calc((100%-40px)/3)]">
+          {rollout.items.map((r, i) => (
+            <li key={r.phase} className="w-[85%] shrink-0 snap-start overflow-hidden rounded-2xl bg-lf-navy sm:w-[calc((100%-20px)/2)] lg:w-[calc((100%-40px)/3)]">
               <div className="relative aspect-[16/10]">
-                <Image src={`${IMG}/${r.img}`} alt="" fill sizes="(min-width: 1024px) 360px, 85vw" className="object-cover" />
+                <Image src={photos[i] ?? `${IMG}/${r.img}`} alt="" fill sizes="(min-width: 1024px) 360px, 85vw" className="object-cover" />
               </div>
-              <div className="lf-card-blue grid gap-2 p-5 text-white">
+              <div className="grid gap-2 p-5 text-white">
                 <p className="text-sm font-bold text-lf-aqua">{r.phase}</p>
-                <h3 className="text-lg font-bold leading-snug text-white md:text-xl">{r.title}</h3>
-                <ArrowRight className="mt-1 size-6 justify-self-end rounded bg-lf-cyan p-1 text-white" aria-hidden />
+                <h3 className="text-lg font-bold leading-snug text-white">{r.title}</h3>
               </div>
             </li>
           ))}
@@ -268,7 +364,7 @@ export function RolloutCarousel() {
           </button>
           <span className="flex gap-2" aria-hidden>
             {rollout.items.map((r, i) => (
-              <span key={r.phase} className={cn('h-2 rounded-full transition-colors', i === page ? 'w-6 bg-lf-heading' : 'w-2 bg-slate-300')} />
+              <span key={r.phase} className={cn('size-2 rounded-full transition-colors', i === page ? 'bg-lf-navy' : 'bg-slate-300')} />
             ))}
           </span>
           <button type="button" onClick={() => step(1)} aria-label={rollout.next} className={arrowBtn}>

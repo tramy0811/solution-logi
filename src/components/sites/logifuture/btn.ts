@@ -1,7 +1,8 @@
-export function btnClass(variant: 'gradient' | 'outline' | 'white' = 'gradient') {
+export function btnClass(variant: 'gradient' | 'outline' | 'white' | 'ghost-light' = 'gradient') {
   const base =
-    'inline-flex items-center justify-center gap-2 rounded-full font-bold whitespace-nowrap transition-[filter,background-color,color,transform] duration-200 active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-lf-aqua cursor-pointer min-h-12 px-7 text-base md:min-h-16 md:px-10 md:text-xl';
-  if (variant === 'outline') return `${base} border border-lf-blue/70 bg-[rgba(208,213,221,0.2)] text-lf-blue hover:bg-lf-blue hover:text-white`;
-  if (variant === 'white') return `${base} bg-white text-lf-blue hover:bg-lf-sky`;
-  return `${base} lf-gradient-btn text-white hover:brightness-110`;
+    'inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-6 text-base font-bold transition-[background-color,color,border-color,transform] duration-200 active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-3 cursor-pointer md:min-h-[52px] md:px-7';
+  if (variant === 'outline') return `${base} border border-lf-blue/40 bg-white text-lf-blue hover:border-lf-blue hover:bg-lf-soft focus-visible:outline-lf-blue`;
+  if (variant === 'ghost-light') return `${base} border border-white/50 text-white hover:border-white hover:bg-white/10 focus-visible:outline-white`;
+  if (variant === 'white') return `${base} bg-white text-lf-navy hover:bg-lf-sky focus-visible:outline-white`;
+  return `${base} bg-lf-bright text-white hover:bg-lf-hover focus-visible:outline-lf-navy`;
 }

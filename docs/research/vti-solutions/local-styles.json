@@ -7,7 +7,7 @@
   "lh": "24px",
   "color": "rgb(39, 46, 78)",
   "bg": "lab(100 0 0)",
-  "h": 8532,
+  "h": 15600,
   "w": 1440
  },
  "header": {
@@ -17,224 +17,413 @@
   "weight": "400",
   "lh": "24px",
   "color": "rgb(39, 46, 78)",
-  "bg": "rgb(255, 255, 255)",
-  "h": 64,
+  "bg": "oklab(0.999994 0.0000455678 0.0000200868 / 0.95)",
+  "h": 65,
   "w": 1440
  },
  "heads": [
   {
    "tag": "H1",
-   "text": "Nền tảng vận hành logistics toàn diệntừ báo giá đến thu tiền",
+   "text": "LogiFuture – Nền tảng vận hành logistics toàn diệncho forwarder, 3PL v",
    "size": "56px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 120
+   "top": 223
   },
   {
    "tag": "H2",
-   "text": "Kết nối sẵn với hệ sinh thái logistics từ hãng tàu, hải quan đến ngân ",
-   "size": "40px",
+   "text": "Kết nối liền mạch với đối tác",
+   "size": "20px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 914
+   "top": 949
   },
   {
    "tag": "H2",
-   "text": "Hệ sinh thái Logi Platform",
-   "size": "40px",
+   "text": "Kiểm soát và tối ưu vận hành logistics trên một nền tảng thống nhất",
+   "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 1432
+   "top": 1194
+  },
+  {
+   "tag": "H3",
+   "text": "Nhìn thấy toàn bộ vận hành theo thời gian thực",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1453
+  },
+  {
+   "tag": "H3",
+   "text": "Kiểm soát quy trình, giảm sai lệch",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1453
+  },
+  {
+   "tag": "H3",
+   "text": "Tối ưu chi phí theo từng lô hàng",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1453
+  },
+  {
+   "tag": "H3",
+   "text": "Chuẩn hóa và mở rộng nhiều chi nhánh",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1453
+  },
+  {
+   "tag": "H2",
+   "text": "Một nền tảng, may đo theo cách bạn vận hành",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1774
+  },
+  {
+   "tag": "H2",
+   "text": "Các năng lực vận hành cốt lõi của Logi Platform",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 2694
+  },
+  {
+   "tag": "H3",
+   "text": "Logi.CRM – Quản lý khách hàng và RFQ",
+   "size": "24px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 2885
+  },
+  {
+   "tag": "H2",
+   "text": "Kiến trúc nền tảng kết nối từ hiện trường đến hệ thống quản trị",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 3477
+  },
+  {
+   "tag": "H2",
+   "text": "Các bài toán LogiFuture giải quyết trong vận hành logistics",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4421
+  },
+  {
+   "tag": "H3",
+   "text": "Báo giá chậm, giá cước nằm rải rác",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4712
+  },
+  {
+   "tag": "H3",
+   "text": "Một lô hàng, nhập liệu nhiều lần",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4712
+  },
+  {
+   "tag": "H3",
+   "text": "Không biết lô hàng và xe đang ở đâu",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4712
+  },
+  {
+   "tag": "H3",
+   "text": "Chứng từ thất lạc, khó tra cứu",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 5171
+  },
+  {
+   "tag": "H3",
+   "text": "Kho vận hành thủ công, tồn không chính xác",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 5171
+  },
+  {
+   "tag": "H3",
+   "text": "Lãi lỗ từng job chỉ biết khi quyết toán",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 5171
   },
   {
    "tag": "H2",
    "text": "Công nghệ nền tảng của LogiFuture",
-   "size": "40px",
+   "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 2297
+   "top": 5690
   },
   {
    "tag": "H2",
    "text": "Trợ lý AI trong từng nghiệp vụ logistics",
-   "size": "40px",
+   "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 2817
-  },
-  {
-   "tag": "H2",
-   "text": "Giải pháp nổi bật",
-   "size": "40px",
-   "weight": "700",
-   "color": "rgb(43, 48, 76)",
-   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 3472
-  },
-  {
-   "tag": "H3",
-   "text": "Báo giá, booking và job – Logi.FMS",
-   "size": "30px",
-   "weight": "700",
-   "color": "rgb(0, 80, 174)",
-   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 3716
+   "top": 6117
   },
   {
    "tag": "H2",
    "text": "Giải pháp theo mô hình doanh nghiệp",
-   "size": "40px",
+   "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 4339
+   "top": 6688
   },
   {
    "tag": "H3",
    "text": "Giao nhận đường biển",
    "size": "24px",
    "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6913
+  },
+  {
+   "tag": "H2",
+   "text": "Case studies",
+   "size": "38px",
+   "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 4637
+   "top": 7540
+  },
+  {
+   "tag": "H3",
+   "text": "Chuẩn hóa quy trình báo giá và booking cho forwarder đường biển",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(0, 80, 174)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 7691
+  },
+  {
+   "tag": "H2",
+   "text": "Điểm khác biệt của Logi Platform",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 8446
   },
   {
    "tag": "H2",
    "text": "Tại sao nên chọn LogiFuture?",
-   "size": "40px",
+   "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 5227
+   "top": 9495
   },
   {
    "tag": "H2",
    "text": "Lộ trình triển khai",
-   "size": "40px",
+   "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 6069
+   "top": 10302
   },
   {
    "tag": "H3",
    "text": "Nền tảng: đăng nhập một lần, phân quyền, dữ liệu gốc, kho chứng từ",
-   "size": "20px",
+   "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 6491
+   "top": 10690
   },
   {
    "tag": "H3",
    "text": "Xương sống lô hàng: Workspace với CRM, FMS, TMS và Driver App",
-   "size": "20px",
+   "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 6491
+   "top": 10690
   },
   {
    "tag": "H3",
    "text": "Kho, hải quan, tài chính: WMS, Customs, Finance và Warehouse App",
-   "size": "20px",
+   "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 6491
+   "top": 10690
   },
   {
    "tag": "H3",
    "text": "Cổng khách hàng: Portal cho khách hàng, nhà xe và hãng vận chuyển",
-   "size": "20px",
+   "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 6491
+   "top": 10690
   },
   {
    "tag": "H3",
    "text": "Dữ liệu và AI: BI, dự báo và Logi.AI Assistant khi đã đủ dữ liệu",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 10690
+  },
+  {
+   "tag": "H2",
+   "text": "Giải thưởng",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 11040
+  },
+  {
+   "tag": "H2",
+   "text": "Báo chí nói gì về LogiFuture?",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 11545
+  },
+  {
+   "tag": "H3",
+   "text": "[Tiêu đề bài báo nổi bật về LogiFuture]",
    "size": "20px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 6491
+   "top": 11955
   },
   {
-   "tag": "H2",
-   "text": "Vận hành logisticstrên một nền tảng thống nhất",
-   "size": "40px",
+   "tag": "H3",
+   "text": "[Tiêu đề bài báo]",
+   "size": "16px",
    "weight": "700",
-   "color": "rgb(255, 255, 255)",
+   "color": "rgb(11, 29, 66)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 6902
+   "top": 11877
+  },
+  {
+   "tag": "H3",
+   "text": "[Tiêu đề bài báo]",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 11877
   },
   {
    "tag": "H2",
-   "text": "FAQS",
-   "size": "40px",
+   "text": "Kiến thức chuyên sâu",
+   "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 7399
+   "top": 12159
   },
   {
-   "tag": "H2",
-   "text": "Form nhận tư vấn",
-   "size": "30px",
+   "tag": "H3",
+   "text": "FMS là gì? Phần mềm quản lý giao nhận cho forwarder",
+   "size": "24px",
    "weight": "700",
-   "color": "rgb(43, 48, 76)",
+   "color": "rgb(11, 29, 66)",
    "font": "\"Google Sans\", ui-sans-serif, system-ui,",
-   "top": 0
+   "top": 12634
+  },
+  {
+   "tag": "H3",
+   "text": "TMS và bài toán điều phối đội xe container",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 12300
   }
  ],
  "btns": [
   {
    "text": "Đặt lịch demo",
-   "bg": "rgba(0, 0, 0, 0)",
+   "bg": "rgb(5, 92, 255)",
    "color": "rgb(255, 255, 255)",
-   "radius": "3.35544e+07px",
+   "radius": "14px",
    "pad": "0px 20px",
    "size": "15px",
    "weight": "700",
-   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
+   "bgImg": "none"
   },
   {
-   "text": "Đặt lịch demo",
-   "bg": "rgba(0, 0, 0, 0)",
-   "color": "rgb(255, 255, 255)",
-   "radius": "3.35544e+07px",
-   "pad": "0px 40px",
-   "size": "20px",
+   "text": "Nhận tư vấn theo bài toán của bạn",
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 29, 66)",
+   "radius": "14px",
+   "pad": "0px 28px",
+   "size": "16px",
    "weight": "700",
-   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
+   "bgImg": "none"
+  },
+  {
+   "text": "Demo theo bài toán của bạn",
+   "bg": "rgb(5, 92, 255)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "14px",
+   "pad": "0px 28px",
+   "size": "16px",
+   "weight": "700",
+   "bgImg": "none"
   },
   {
    "text": "Đăng kí nhận tư vấn",
-   "bg": "rgba(0, 0, 0, 0)",
+   "bg": "rgb(5, 92, 255)",
    "color": "rgb(255, 255, 255)",
-   "radius": "3.35544e+07px",
-   "pad": "0px 40px",
-   "size": "20px",
+   "radius": "14px",
+   "pad": "0px 28px",
+   "size": "16px",
    "weight": "700",
-   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
-  },
-  {
-   "text": "Đăng kí nhận tư vấn",
-   "bg": "rgba(0, 0, 0, 0)",
-   "color": "rgb(255, 255, 255)",
-   "radius": "3.35544e+07px",
-   "pad": "0px 40px",
-   "size": "20px",
-   "weight": "700",
-   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
+   "bgImg": "none"
   }
  ],
- "height": 8532
+ "height": 15600
 }
