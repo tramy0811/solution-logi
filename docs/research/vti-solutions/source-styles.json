@@ -1,0 +1,348 @@
+{
+ "body": {
+  "sel": "body",
+  "font": "\"Google Sans\"",
+  "size": "16px",
+  "weight": "400",
+  "lh": "25.6px",
+  "color": "rgb(39, 46, 78)",
+  "bg": "rgba(0, 0, 0, 0)",
+  "h": 12649,
+  "w": 1440
+ },
+ "header": {
+  "sel": "header",
+  "font": "\"Google Sans\"",
+  "size": "16px",
+  "weight": "400",
+  "lh": "25.6px",
+  "color": "rgb(39, 46, 78)",
+  "bg": "rgba(0, 0, 0, 0)",
+  "h": 60,
+  "w": 1440
+ },
+ "heads": [
+  {
+   "tag": "H1",
+   "text": "Nền tảng quản trị sản xuất toàn diệnthông minh tích hợp  AI",
+   "size": "59px",
+   "weight": "800",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 114
+  },
+  {
+   "tag": "H2",
+   "text": "Đồng hành cùng 100+ doanh nghiệp trên hành trình chuyển đổi nhà máy th",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 958
+  },
+  {
+   "tag": "H2",
+   "text": "Giải pháp made by VTI Solutions",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 1601
+  },
+  {
+   "tag": "H2",
+   "text": "Đi đầu trong ứng dụng những công nghệ mới nhất",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 2549
+  },
+  {
+   "tag": "H2",
+   "text": "Tích hợp sâu AI vào từng giải pháp quản trị sản xuất",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 3154
+  },
+  {
+   "tag": "H2",
+   "text": "Giải pháp nổi bật",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 3970
+  },
+  {
+   "tag": "H3",
+   "text": "Hệ thống điều hành sản xuất MESX",
+   "size": "30px",
+   "weight": "700",
+   "color": "rgb(0, 80, 174)",
+   "font": "\"Google Sans\"",
+   "top": 4244
+  },
+  {
+   "tag": "H2",
+   "text": "Cá nhân hóa giải pháp theo ngành dọc",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 4997
+  },
+  {
+   "tag": "H3",
+   "text": "Linh kiện điện tử",
+   "size": "30px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 5258
+  },
+  {
+   "tag": "H2",
+   "text": "Tại sao nên chọn VTI Solutions?",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 5977
+  },
+  {
+   "tag": "H2",
+   "text": "Case Studies",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 6936
+  },
+  {
+   "tag": "H3",
+   "text": "Dự án Tự động hóa kho với Robot",
+   "size": "24px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 7391
+  },
+  {
+   "tag": "H3",
+   "text": "Dự án Tích hợp IoT cho SCADA & hệ thống quản lý sản xuất",
+   "size": "24px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 7391
+  },
+  {
+   "tag": "H3",
+   "text": "Dự án Tối ưu quản lý chất lượng & bảo trì cho nhà máy FPCB",
+   "size": "24px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 7391
+  },
+  {
+   "tag": "H3",
+   "text": "Dự án Cải tiến hệ thống quản lý kho & mua hàng",
+   "size": "24px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 7391
+  },
+  {
+   "tag": "H2",
+   "text": "Giải thưởng",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 7769
+  },
+  {
+   "tag": "H2",
+   "text": "Báo chí nói gì về VTI Solutions?",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 8307
+  },
+  {
+   "tag": "H3",
+   "text": "VTI Solutions vinh dự nhậnGiải thưởng Sao Khuê 2024",
+   "size": "24px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 8650
+  },
+  {
+   "tag": "H3",
+   "text": "Dành 10% tổng doanh thu để chuyển đổi số: Nhiều DN vẫn thất bại vì đâu",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 8614
+  },
+  {
+   "tag": "H3",
+   "text": "Dành 10% tổng doanh thu để chuyển đổi số: Nhiều DN vẫn thất bại vì đâu",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 8614
+  },
+  {
+   "tag": "H3",
+   "text": "Giải pháp chuyển đổi số Make in Vietnam ''thắng lớn'' tại ASEAN Digita",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 8614
+  },
+  {
+   "tag": "H3",
+   "text": "Dành 10% tổng doanh thu để chuyển đổi số: Nhiều DN vẫn thất bại vì đâu",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 8614
+  },
+  {
+   "tag": "H3",
+   "text": "Dành 10% tổng doanh thu để chuyển đổi số: Nhiều DN vẫn thất bại vì đâu",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 8614
+  },
+  {
+   "tag": "H3",
+   "text": "Giải pháp chuyển đổi số Make in Vietnam ''thắng lớn'' tại ASEAN Digita",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 8614
+  },
+  {
+   "tag": "H3",
+   "text": "Dành 10% tổng doanh thu để chuyển đổi số: Nhiều DN vẫn thất bại vì đâu",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 8614
+  },
+  {
+   "tag": "H2",
+   "text": "Kiến thức chuyên sâu",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 8858
+  },
+  {
+   "tag": "H2",
+   "text": "Tăng trưởng bền vững với nền tảng quản trị sản xuất  tích hợp AI",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\"",
+   "top": 9733
+  },
+  {
+   "tag": "H2",
+   "text": "FAQS",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\"",
+   "top": 10307
+  },
+  {
+   "tag": "H2",
+   "text": "FAQS",
+   "size": "25.6px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H3",
+   "text": "FORM NHẬN TƯ VẤN",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  },
+  {
+   "tag": "H3",
+   "text": "FORM NHẬN TƯ VẤN",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(39, 46, 78)",
+   "font": "\"Google Sans\"",
+   "top": 0
+  }
+ ],
+ "btns": [
+  {
+   "text": "Đăng kí nhận tư vấn",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "40px",
+   "pad": "22px 41px",
+   "size": "20px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%), linear-gradient(157."
+  },
+  {
+   "text": "Đăng kí nhận tư vấn",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "40px",
+   "pad": "22px 41px",
+   "size": "20px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%), linear-gradient(157."
+  },
+  {
+   "text": "Demo tính năng",
+   "bg": "rgba(208, 213, 221, 0.2)",
+   "color": "rgb(0, 80, 174)",
+   "radius": "40px",
+   "pad": "0px",
+   "size": "20px",
+   "weight": "700",
+   "bgImg": "none"
+  },
+  {
+   "text": "Đăng kí tư vấn miễn phí",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "40px",
+   "pad": "22px 41px",
+   "size": "20px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%), linear-gradient(157."
+  }
+ ],
+ "height": 12649
+}

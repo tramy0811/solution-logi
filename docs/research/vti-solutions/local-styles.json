@@ -1,0 +1,240 @@
+{
+ "body": {
+  "sel": "body",
+  "font": "\"Google Sans\", ui-sans-serif, system-ui, sans-serif",
+  "size": "16px",
+  "weight": "400",
+  "lh": "24px",
+  "color": "rgb(39, 46, 78)",
+  "bg": "lab(100 0 0)",
+  "h": 8532,
+  "w": 1440
+ },
+ "header": {
+  "sel": "header",
+  "font": "\"Google Sans\", ui-sans-serif, system-ui, sans-serif",
+  "size": "16px",
+  "weight": "400",
+  "lh": "24px",
+  "color": "rgb(39, 46, 78)",
+  "bg": "rgb(255, 255, 255)",
+  "h": 64,
+  "w": 1440
+ },
+ "heads": [
+  {
+   "tag": "H1",
+   "text": "Nền tảng vận hành logistics toàn diệntừ báo giá đến thu tiền",
+   "size": "56px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 120
+  },
+  {
+   "tag": "H2",
+   "text": "Kết nối sẵn với hệ sinh thái logistics từ hãng tàu, hải quan đến ngân ",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 914
+  },
+  {
+   "tag": "H2",
+   "text": "Hệ sinh thái Logi Platform",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1432
+  },
+  {
+   "tag": "H2",
+   "text": "Công nghệ nền tảng của LogiFuture",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 2297
+  },
+  {
+   "tag": "H2",
+   "text": "Trợ lý AI trong từng nghiệp vụ logistics",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 2817
+  },
+  {
+   "tag": "H2",
+   "text": "Giải pháp nổi bật",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 3472
+  },
+  {
+   "tag": "H3",
+   "text": "Báo giá, booking và job – Logi.FMS",
+   "size": "30px",
+   "weight": "700",
+   "color": "rgb(0, 80, 174)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 3716
+  },
+  {
+   "tag": "H2",
+   "text": "Giải pháp theo mô hình doanh nghiệp",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4339
+  },
+  {
+   "tag": "H3",
+   "text": "Giao nhận đường biển",
+   "size": "24px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4637
+  },
+  {
+   "tag": "H2",
+   "text": "Tại sao nên chọn LogiFuture?",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 5227
+  },
+  {
+   "tag": "H2",
+   "text": "Lộ trình triển khai",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6069
+  },
+  {
+   "tag": "H3",
+   "text": "Nền tảng: đăng nhập một lần, phân quyền, dữ liệu gốc, kho chứng từ",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6491
+  },
+  {
+   "tag": "H3",
+   "text": "Xương sống lô hàng: Workspace với CRM, FMS, TMS và Driver App",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6491
+  },
+  {
+   "tag": "H3",
+   "text": "Kho, hải quan, tài chính: WMS, Customs, Finance và Warehouse App",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6491
+  },
+  {
+   "tag": "H3",
+   "text": "Cổng khách hàng: Portal cho khách hàng, nhà xe và hãng vận chuyển",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6491
+  },
+  {
+   "tag": "H3",
+   "text": "Dữ liệu và AI: BI, dự báo và Logi.AI Assistant khi đã đủ dữ liệu",
+   "size": "20px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6491
+  },
+  {
+   "tag": "H2",
+   "text": "Vận hành logisticstrên một nền tảng thống nhất",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6902
+  },
+  {
+   "tag": "H2",
+   "text": "FAQS",
+   "size": "40px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 7399
+  },
+  {
+   "tag": "H2",
+   "text": "Form nhận tư vấn",
+   "size": "30px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 0
+  }
+ ],
+ "btns": [
+  {
+   "text": "Đặt lịch demo",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "3.35544e+07px",
+   "pad": "0px 20px",
+   "size": "15px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
+  },
+  {
+   "text": "Đặt lịch demo",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "3.35544e+07px",
+   "pad": "0px 40px",
+   "size": "20px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
+  },
+  {
+   "text": "Đăng kí nhận tư vấn",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "3.35544e+07px",
+   "pad": "0px 40px",
+   "size": "20px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
+  },
+  {
+   "text": "Đăng kí nhận tư vấn",
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "3.35544e+07px",
+   "pad": "0px 40px",
+   "size": "20px",
+   "weight": "700",
+   "bgImg": "linear-gradient(88.65deg, rgb(0, 178, 255) 13.28%, rgb(5, 92, 255) 71.09%, rgb(0, 76, 217) 95.19%)"
+  }
+ ],
+ "height": 8532
+}
