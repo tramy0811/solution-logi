@@ -39,7 +39,7 @@ export const hero = {
   points: ['Thay thế Excel, email và các phần mềm rời rạc', 'Giảm nhập liệu lặp lại, nắm rõ lô hàng và lãi lỗ theo từng job'],
   cta: 'Nhận tư vấn theo bài toán của bạn',
   secondary: 'Xem các bài toán',
-  imgAlt: 'Tàu container rời cảng',
+  imgAlt: 'Cảng container lúc hoàng hôn: tàu hàng, cẩu bờ, xe đầu kéo và máy bay chở hàng',
 };
 
 export const pains = {
@@ -370,26 +370,6 @@ export const whyHub = {
   ],
   prev: 'Lý do trước',
   next: 'Lý do tiếp theo',
-};
-
-export const awards = {
-  title: 'Giải thưởng',
-  sample: true,
-  items: [
-    { name: '[Tên giải thưởng]', org: '[Đơn vị trao giải]', year: '[Năm]' },
-    { name: '[Tên giải thưởng]', org: '[Đơn vị trao giải]', year: '[Năm]' },
-    { name: '[Tên chứng nhận]', org: '[Đơn vị cấp]', year: '[Năm]' },
-  ],
-};
-
-export const press = {
-  title: 'Báo chí nói gì về LogiFuture?',
-  sample: true,
-  items: [
-    { title: '[Tiêu đề bài báo nổi bật về LogiFuture]', source: '[Tên báo]', img: 'singapore-harbour.webp', lead: true },
-    { title: '[Tiêu đề bài báo]', source: '[Tên báo]', img: 'container-ship.webp' },
-    { title: '[Tiêu đề bài báo]', source: '[Tên báo]', img: 'containers-stacked.webp' },
-  ],
 };
 
 export const posts = {

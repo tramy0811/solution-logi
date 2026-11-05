@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Boxes, CircleHelp, Layers, Lightbulb, Route, Workflow, type LucideIcon } from 'lucide-react';
+import { ArrowRight, Boxes, CircleHelp, Layers, Lightbulb, Route, Workflow, type IconType } from './icons';
 import { cn } from '@/lib/utils';
 import { ConsultButton } from './consult';
 import { IMG, modules, nav } from './content';
@@ -18,7 +18,7 @@ export function Logo({ light = false }: { light?: boolean }) {
   );
 }
 
-const linkIcons: LucideIcon[] = [Lightbulb, Layers, Boxes, Workflow, Route, CircleHelp];
+const linkIcons: IconType[] = [Lightbulb, Layers, Boxes, Workflow, Route, CircleHelp];
 
 function Burger({ open }: { open: boolean }) {
   const bar = 'absolute left-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-300';

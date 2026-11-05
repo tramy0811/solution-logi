@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro } from "next/font/google";
+import { Google_Sans } from "next/font/google";
 import "./globals.css";
 
-const sans = Be_Vietnam_Pro({
-  variable: "--font-be-vietnam",
+// Cùng font với vti-solutions.vn
+const sans = Google_Sans({
+  variable: "--font-google-sans",
   subsets: ["latin", "vietnamese"],
   weight: ["400", "500", "600", "700"],
 });

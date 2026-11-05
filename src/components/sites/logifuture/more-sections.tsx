@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { ArrowUpRight, Award, ChevronsRight, CircleCheck, Eye, GitBranch, Lightbulb, Network, PiggyBank, Plus } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
-import { architecture, awards, IMG, pains, posts, press, SAMPLE_LABEL, values } from './content';
+import { ArrowRight, ChevronsRight, CircleCheck, Eye, GitBranch, Lightbulb, Network, PiggyBank, Plus } from './icons';
+import type { IconType } from './icons';
+import { architecture, IMG, pains, posts, SAMPLE_LABEL, values } from './content';
 import { SectionTitle } from './section-title';
 
 const reveal = (i = 0) => ({ 'data-reveal': '', style: { '--i': i } as React.CSSProperties });
@@ -15,13 +15,13 @@ export function SampleBadge({ light = false }: { light?: boolean }) {
 }
 
 /* ---------- Kiểm soát & tối ưu vận hành: 4 thẻ giá trị ---------- */
-const valueIcons: LucideIcon[] = [Eye, GitBranch, PiggyBank, Network];
+const valueIcons: IconType[] = [Eye, GitBranch, PiggyBank, Network];
 
 export function Values() {
   return (
-    <section className="bg-[linear-gradient(180deg,#ffffff,#f1f6ff)] px-4 py-12 md:px-6 md:py-16" aria-labelledby="values-h">
+    <section className="bg-[linear-gradient(180deg,#ffffff,#f1f6ff)] px-4 py-10 md:px-6 md:py-12" aria-labelledby="values-h">
       <SectionTitle id="values-h" title={values.title} sub={values.sub} />
-      <ul className="mx-auto mt-12 grid max-w-[1240px] gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mx-auto mt-10 grid max-w-[1240px] gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
         {values.items.map((v, i) => {
           const Icon = valueIcons[i];
           return (
@@ -42,7 +42,7 @@ export function Values() {
 /* ---------- Kiến trúc nền tảng: sơ đồ của LogiFuture (D:\\LogiFuture\\solution\\image) ---------- */
 export function Architecture() {
   return (
-    <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="arch-h">
+    <section className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="arch-h">
       <SectionTitle id="arch-h" title={architecture.title} sub={architecture.sub} />
       <div className="mx-auto mt-8 max-w-[1240px]" data-reveal>
         <Image
@@ -61,9 +61,9 @@ export function Architecture() {
 /* ---------- Các bài toán giải quyết ---------- */
 export function Pains() {
   return (
-    <section id="bai-toan" className="bg-[linear-gradient(180deg,#f1f6ff,#ffffff)] px-4 py-12 md:px-6 md:py-16" aria-labelledby="pains-h">
+    <section id="bai-toan" className="bg-[linear-gradient(180deg,#f1f6ff,#ffffff)] px-4 py-10 md:px-6 md:py-12" aria-labelledby="pains-h">
       <SectionTitle id="pains-h" title={pains.title} sub={pains.sub} />
-      <ul className="mx-auto mt-8 grid max-w-[1240px] gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <ul className="mx-auto mt-6 grid max-w-[1240px] gap-5 md:grid-cols-2 lg:grid-cols-3">
         {pains.items.map((p, i) => (
           <li key={p.title} {...reveal(i % 3)} className="flex flex-col rounded-2xl border border-lf-line bg-white p-6 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-lf-bright/40 hover:shadow-[0_20px_40px_-28px_rgb(11_29_66/0.5)]">
             <span className="grid size-12 place-items-center rounded-full bg-lf-soft text-lf-bright">
@@ -83,7 +83,7 @@ export function Pains() {
               ))}
             </ul>
             <p className="mt-4 flex items-center gap-1.5 text-sm font-bold text-lf-navy">
-              <ArrowUpRight className="size-4 rotate-45 text-lf-bright" aria-hidden />
+              <ArrowRight className="size-3.5 text-lf-bright" aria-hidden />
               {pains.solve}
             </p>
             <ul className="mt-1.5 grid gap-1 text-sm text-lf-text">
@@ -106,77 +106,14 @@ export function Pains() {
   );
 }
 
-/* ---------- Giải thưởng ---------- */
-export function Awards() {
-  return (
-    <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="awards-h">
-      <SectionTitle id="awards-h" title={awards.title} />
-      <SampleBadge />
-      <ul className="mx-auto mt-8 grid max-w-[1100px] gap-6 sm:grid-cols-3">
-        {awards.items.map((a, i) => (
-          <li key={i} {...reveal(i)} className="relative pb-10">
-            <div className="grid aspect-[16/10] place-items-center rounded-2xl border border-dashed border-lf-line bg-lf-soft text-lf-text">
-              <span className="grid justify-items-center gap-2 text-sm">
-                <Award className="size-10 text-lf-bright" strokeWidth={1.5} aria-hidden />
-                Ảnh lễ trao giải
-              </span>
-            </div>
-            <div className="absolute inset-x-8 bottom-0 rounded-xl bg-lf-navy px-4 py-3 text-center text-white shadow-[0_12px_24px_-12px_rgb(11_29_66/0.7)]">
-              <p className="text-xs text-lf-aqua">{a.org}</p>
-              <p className="text-sm font-bold">{a.name}</p>
-              <p className="text-xs text-white/70">{a.year}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
-/* ---------- Báo chí ---------- */
-export function Press() {
-  const [lead, ...rest] = press.items;
-  return (
-    <section className="bg-lf-soft px-4 py-12 md:px-6 md:py-16" aria-labelledby="press-h">
-      <SectionTitle id="press-h" title={press.title} />
-      <SampleBadge />
-      <div className="mx-auto mt-8 grid max-w-[1100px] gap-5 md:grid-cols-[1.4fr_1fr_1fr]">
-        <article className="relative overflow-hidden rounded-2xl bg-lf-navy" data-reveal>
-          <div className="relative aspect-[16/10]">
-            <Image src={`${IMG}/${lead.img}`} alt="" fill sizes="(min-width: 768px) 480px, 100vw" className="object-cover opacity-80" />
-          </div>
-          <div className="p-5 text-white">
-            <h3 className="text-xl font-bold leading-snug">{lead.title}</h3>
-            <p className="mt-2 text-sm text-lf-aqua">{lead.source}</p>
-          </div>
-        </article>
-        {rest.map((p, i) => (
-          <article key={i} {...reveal(i + 1)} className="overflow-hidden rounded-2xl border border-lf-line bg-white">
-            <div className="relative aspect-[16/10]">
-              <Image src={`${IMG}/${p.img}`} alt="" fill sizes="(min-width: 768px) 300px, 100vw" className="object-cover" />
-            </div>
-            <div className="p-5">
-              <h3 className="font-bold leading-snug text-lf-navy">{p.title}</h3>
-              <p className="mt-3 flex items-center gap-1 text-sm text-lf-bright">
-                {p.source}
-                <ArrowUpRight className="size-4" aria-hidden />
-              </p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 /* ---------- Kiến thức chuyên sâu ---------- */
 export function Knowledge() {
   const [lead, ...rest] = posts.items;
   return (
-    <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="posts-h">
+    <section className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="posts-h">
       <SectionTitle id="posts-h" title={posts.title} />
       <SampleBadge />
-      <div className="mx-auto mt-8 grid max-w-[1240px] gap-6 lg:grid-cols-2">
+      <div className="mx-auto mt-6 grid max-w-[1240px] gap-6 lg:grid-cols-2">
         <article data-reveal>
           <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
             <Image src={`${IMG}/${lead.img}`} alt="" fill sizes="(min-width: 1024px) 600px, 100vw" className="object-cover" />

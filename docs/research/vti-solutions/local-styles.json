@@ -1,18 +1,18 @@
 {
  "body": {
   "sel": "body",
-  "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallback\", ui-sans-serif, system-ui, sans-serif",
+  "font": "\"Google Sans\", ui-sans-serif, system-ui, sans-serif",
   "size": "16px",
   "weight": "400",
   "lh": "24px",
   "color": "rgb(39, 46, 78)",
   "bg": "lab(100 0 0)",
-  "h": 15319,
+  "h": 13509,
   "w": 1440
  },
  "header": {
   "sel": "header",
-  "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallback\", ui-sans-serif, system-ui, sans-serif",
+  "font": "\"Google Sans\", ui-sans-serif, system-ui, sans-serif",
   "size": "16px",
   "weight": "400",
   "lh": "24px",
@@ -28,7 +28,7 @@
    "size": "56px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
    "top": 223
   },
   {
@@ -37,7 +37,7 @@
    "size": "18px",
    "weight": "500",
    "color": "rgb(61, 69, 102)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
    "top": 949
   },
   {
@@ -46,8 +46,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 1186
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1170
   },
   {
    "tag": "H3",
@@ -55,8 +55,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 1437
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1413
   },
   {
    "tag": "H3",
@@ -64,8 +64,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 1437
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1413
   },
   {
    "tag": "H3",
@@ -73,8 +73,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 1437
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1413
   },
   {
    "tag": "H3",
@@ -82,8 +82,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 1437
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1413
   },
   {
    "tag": "H2",
@@ -91,8 +91,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 1726
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 1670
   },
   {
    "tag": "H2",
@@ -100,8 +100,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 2633
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 2510
   },
   {
    "tag": "H3",
@@ -109,8 +109,8 @@
    "size": "24px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 2816
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 2685
   },
   {
    "tag": "H2",
@@ -118,8 +118,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 3376
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 3213
   },
   {
    "tag": "H2",
@@ -127,8 +127,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 4376
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4153
   },
   {
    "tag": "H3",
@@ -136,8 +136,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 4659
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4428
   },
   {
    "tag": "H3",
@@ -145,8 +145,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 4659
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4428
   },
   {
    "tag": "H3",
@@ -154,8 +154,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 4659
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4428
   },
   {
    "tag": "H3",
@@ -163,8 +163,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 5158
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4887
   },
   {
    "tag": "H3",
@@ -172,8 +172,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 5158
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4887
   },
   {
    "tag": "H3",
@@ -181,8 +181,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 5158
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 4887
   },
   {
    "tag": "H2",
@@ -190,8 +190,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 5680
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 5357
   },
   {
    "tag": "H2",
@@ -199,8 +199,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 6084
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 5721
   },
   {
    "tag": "H2",
@@ -208,8 +208,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 6641
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6212
   },
   {
    "tag": "H3",
@@ -217,8 +217,8 @@
    "size": "24px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 6866
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 6436
   },
   {
    "tag": "H2",
@@ -226,8 +226,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 7461
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 7000
   },
   {
    "tag": "H3",
@@ -235,8 +235,8 @@
    "size": "20px",
    "weight": "700",
    "color": "rgb(0, 80, 174)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 7612
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 7150
   },
   {
    "tag": "H2",
@@ -244,8 +244,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 8335
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 7841
   },
   {
    "tag": "H2",
@@ -253,8 +253,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 9344
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 8819
   },
   {
    "tag": "H2",
@@ -262,8 +262,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 10103
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 9530
   },
   {
    "tag": "H3",
@@ -271,8 +271,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 10491
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 9918
   },
   {
    "tag": "H3",
@@ -280,8 +280,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 10491
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 9918
   },
   {
    "tag": "H3",
@@ -289,8 +289,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 10491
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 9918
   },
   {
    "tag": "H3",
@@ -298,8 +298,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 10491
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 9918
   },
   {
    "tag": "H3",
@@ -307,53 +307,8 @@
    "size": "18px",
    "weight": "700",
    "color": "rgb(255, 255, 255)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 10491
-  },
-  {
-   "tag": "H2",
-   "text": "Giải thưởng",
-   "size": "38px",
-   "weight": "700",
-   "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 10825
-  },
-  {
-   "tag": "H2",
-   "text": "Báo chí nói gì về LogiFuture?",
-   "size": "38px",
-   "weight": "700",
-   "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 11330
-  },
-  {
-   "tag": "H3",
-   "text": "[Tiêu đề bài báo nổi bật về LogiFuture]",
-   "size": "20px",
-   "weight": "700",
-   "color": "rgb(255, 255, 255)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 11740
-  },
-  {
-   "tag": "H3",
-   "text": "[Tiêu đề bài báo]",
-   "size": "16px",
-   "weight": "700",
-   "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 11662
-  },
-  {
-   "tag": "H3",
-   "text": "[Tiêu đề bài báo]",
-   "size": "16px",
-   "weight": "700",
-   "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 11662
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 9918
   },
   {
    "tag": "H2",
@@ -361,8 +316,8 @@
    "size": "38px",
    "weight": "700",
    "color": "rgb(43, 48, 76)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 11943
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 10220
   },
   {
    "tag": "H3",
@@ -370,8 +325,8 @@
    "size": "24px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 12419
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 10687
   },
   {
    "tag": "H3",
@@ -379,8 +334,53 @@
    "size": "16px",
    "weight": "700",
    "color": "rgb(11, 29, 66)",
-   "font": "\"Be Vietnam Pro\", \"Be Vietnam Pro Fallba",
-   "top": 12085
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 10353
+  },
+  {
+   "tag": "H3",
+   "text": "Số hóa chứng từ logistics bằng OCR",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 10463
+  },
+  {
+   "tag": "H3",
+   "text": "WMS cho kho nhiều chủ hàng: những điểm cần lưu ý",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 10573
+  },
+  {
+   "tag": "H3",
+   "text": "Lãi lỗ theo job: vì sao forwarder cần theo dõi sớm",
+   "size": "16px",
+   "weight": "700",
+   "color": "rgb(11, 29, 66)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 10682
+  },
+  {
+   "tag": "H2",
+   "text": "Vận hành logistics trên một nền tảng thống nhất",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 11025
+  },
+  {
+   "tag": "H2",
+   "text": "FAQS",
+   "size": "38px",
+   "weight": "700",
+   "color": "rgb(43, 48, 76)",
+   "font": "\"Google Sans\", ui-sans-serif, system-ui,",
+   "top": 11488
   }
  ],
  "btns": [
@@ -425,5 +425,5 @@
    "bgImg": "none"
   }
  ],
- "height": 15319
+ "height": 13509
 }

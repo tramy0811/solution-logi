@@ -15,8 +15,8 @@ import {
   Ship,
   Truck,
   Warehouse,
-  type LucideIcon,
-} from 'lucide-react';
+  type IconType,
+} from './icons';
 import { cn } from '@/lib/utils';
 import { ConsultButton } from './consult';
 import { capabilities, cases, IMG, modelExtras, models, rollout, SAMPLE_LABEL, whyHub } from './content';
@@ -58,9 +58,9 @@ export function Capabilities() {
   const { active, go, refs, onKey } = useTabs(items.length);
   const c = items[active];
   return (
-    <section id="giai-phap" className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="cap-h">
+    <section id="giai-phap" className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="cap-h">
       <SectionTitle id="cap-h" title={capabilities.title} />
-      <div className="mx-auto mt-8 grid max-w-[1240px] gap-5 rounded-3xl bg-lf-soft p-4 md:p-6 lg:grid-cols-[0.85fr_1.15fr]" data-reveal>
+      <div className="mx-auto mt-6 grid max-w-[1240px] gap-5 rounded-3xl bg-lf-soft p-4 md:p-6 lg:grid-cols-[0.85fr_1.15fr]" data-reveal>
         <div role="tablist" aria-orientation="vertical" aria-label={capabilities.title} onKeyDown={(e) => onKey(e, true)} className="lf-no-scrollbar flex gap-2 overflow-x-auto lg:grid lg:content-start lg:overflow-visible">
           {items.map((it, i) => (
             <button
@@ -104,7 +104,7 @@ export function Capabilities() {
 }
 
 /* ---------- Theo mô hình doanh nghiệp ---------- */
-const modelIcons: LucideIcon[] = [Ship, Plane, Truck, Warehouse, Boxes, ShieldCheck];
+const modelIcons: IconType[] = [Ship, Plane, Truck, Warehouse, Boxes, ShieldCheck];
 
 function MiniScreen({ title, rows, className }: { title: string; rows: string[][]; className?: string }) {
   return (
@@ -127,7 +127,7 @@ export function ModelsTabs({ photos = [], logos = [] }: { photos?: string[]; log
   const { active, go, refs, onKey } = useTabs(items.length);
   const m = items[active];
   return (
-    <section id="mo-hinh" className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="models-h">
+    <section id="mo-hinh" className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="models-h">
       <SectionTitle
         id="models-h"
         title={models.title}
@@ -244,7 +244,7 @@ export function CaseStudies({ photos = [] }: { photos?: string[] }) {
     </div>
   );
   return (
-    <section id="case-studies" className="bg-[linear-gradient(180deg,#ffffff,#f1f6ff)] px-4 py-12 md:px-6 md:py-16" aria-labelledby="cases-h">
+    <section id="case-studies" className="bg-[linear-gradient(180deg,#ffffff,#f1f6ff)] px-4 py-10 md:px-6 md:py-12" aria-labelledby="cases-h">
       <SectionTitle id="cases-h" title={cases.title} />
       <p className="mx-auto mt-3 w-fit rounded-full border border-dashed border-amber-500 px-3 py-1 text-xs font-medium text-amber-700">{SAMPLE_LABEL}: thay bằng dự án thật trong content.ts</p>
       <article key={i} className="lf-tab-panel mx-auto mt-8 grid max-w-[1100px] overflow-hidden rounded-3xl border border-lf-line bg-white lg:grid-cols-[1fr_1fr_0.85fr]" aria-live="polite">
@@ -288,7 +288,7 @@ export function WhyHub() {
   const cards = whyHub.cards;
   const visible = [0, 1, 2].map((k) => cards[(start + k) % cards.length]);
   return (
-    <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="hub-h">
+    <section className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="hub-h">
       <SectionTitle id="hub-h" title={whyHub.title} />
       <div className="mx-auto mt-8 w-full max-w-[900px]" data-reveal>
         <Image src={`${IMG}/platform-hub.webp`} alt={whyHub.imgAlt} width={1536} height={1024} sizes="(min-width: 960px) 900px, 100vw" className="h-auto w-full" />
@@ -333,7 +333,7 @@ export function RolloutCarousel({ photos = [] }: { photos?: string[] }) {
     setPage(max <= 0 ? 0 : Math.round((el.scrollLeft / max) * (rollout.items.length - 1)));
   };
   return (
-    <section id="lo-trinh" className="bg-lf-soft px-4 py-12 md:px-6 md:py-16" aria-labelledby="roll-h">
+    <section id="lo-trinh" className="bg-lf-soft px-4 py-10 md:px-6 md:py-12" aria-labelledby="roll-h">
       <SectionTitle
         id="roll-h"
         title={rollout.title}

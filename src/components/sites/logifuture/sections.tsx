@@ -14,8 +14,8 @@ import {
   Plus,
   Repeat2,
   Workflow,
-  type LucideIcon,
-} from 'lucide-react';
+  type IconType,
+} from './icons';
 import { btnClass } from './btn';
 import { ConsultButton } from './consult';
 import { ai, band, connect, ecosystem, faq, footer, IMG, modules, offices, SAMPLE_LABEL, tech, why } from './content';
@@ -60,9 +60,9 @@ export function Connect() {
 
 export function Ecosystem() {
   return (
-    <section id="he-sinh-thai" className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="eco-h">
+    <section id="he-sinh-thai" className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="eco-h">
       <SectionTitle id="eco-h" title={ecosystem.title} sub={ecosystem.sub} />
-      <div className="mx-auto mt-8 grid max-w-[1240px] gap-4 rounded-3xl bg-lf-soft p-4 md:p-5 lg:grid-cols-[1fr_1.6fr_1fr]" {...reveal(1)}>
+      <div className="mx-auto mt-6 grid max-w-[1240px] gap-4 rounded-3xl bg-lf-soft p-4 md:p-5 lg:grid-cols-[1fr_1.6fr_1fr]" {...reveal(1)}>
         <div className="rounded-2xl bg-white p-5">
           <p className="font-bold text-lf-navy">{ecosystem.channelsTitle}</p>
           <ul className="mt-4 grid gap-3">
@@ -123,13 +123,13 @@ export function Ecosystem() {
 }
 
 /* ---------- Công nghệ ---------- */
-const techIcons: LucideIcon[] = [BrainCircuit, FileScan, Repeat2, Workflow, Cloud, KeyRound, Barcode, MapPin];
+const techIcons: IconType[] = [BrainCircuit, FileScan, Repeat2, Workflow, Cloud, KeyRound, Barcode, MapPin];
 
 export function Tech() {
   return (
-    <section className="bg-lf-soft px-4 py-12 md:px-6 md:py-16" aria-labelledby="tech-h">
+    <section className="bg-lf-soft px-4 py-10 md:px-6 md:py-12" aria-labelledby="tech-h">
       <SectionTitle id="tech-h" title={tech.title} />
-      <ul className="mx-auto mt-8 grid max-w-[1100px] grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
+      <ul className="mx-auto mt-6 grid max-w-[1100px] grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
         {tech.items.map((t, i) => {
           const Icon = techIcons[i];
           return (
@@ -164,9 +164,9 @@ export function AiSection() {
     </div>
   );
   return (
-    <section className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="ai-h">
+    <section className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="ai-h">
       <SectionTitle id="ai-h" title={ai.title} sub={ai.sub} />
-      <div className="mx-auto mt-8 grid max-w-[1100px] items-center gap-4 lg:grid-cols-[1fr_220px_1fr] lg:gap-8">
+      <div className="mx-auto mt-6 grid max-w-[1100px] items-center gap-4 lg:grid-cols-[1fr_220px_1fr] lg:gap-8">
         <div className="grid gap-4">
           {card(a, 0)}
           {card(c, 2)}
@@ -187,14 +187,14 @@ export function AiSection() {
 }
 
 /* ---------- Tại sao chọn ---------- */
-const whyIcons: LucideIcon[] = [Layers, Repeat2, Network, Globe2];
+const whyIcons: IconType[] = [Layers, Repeat2, Network, Globe2];
 
 export function Why() {
   const [photo] = userPhotos([`${IMG}/container-ship.webp`]);
   return (
-    <section className="bg-lf-soft px-4 py-12 md:px-6 md:py-16" aria-labelledby="why-h">
+    <section className="bg-lf-soft px-4 py-10 md:px-6 md:py-12" aria-labelledby="why-h">
       <SectionTitle id="why-h" title={why.title} />
-      <div className="mx-auto mt-8 grid max-w-[1100px] items-center gap-10 lg:grid-cols-2">
+      <div className="mx-auto mt-6 grid max-w-[1100px] items-center gap-10 lg:grid-cols-2">
         <div className="relative mx-auto aspect-[4/3.2] w-full max-w-[500px] overflow-hidden rounded-2xl" data-reveal>
           <Image src={photo} alt={why.imgAlt} fill sizes="(min-width: 1024px) 500px, 100vw" className="object-cover object-[30%_60%]" />
         </div>
@@ -217,7 +217,7 @@ export function Why() {
           </a>
         </div>
       </div>
-      <dl className="mx-auto mt-8 grid max-w-[1100px] grid-cols-2 gap-px overflow-hidden rounded-2xl bg-lf-line lg:grid-cols-4" data-reveal>
+      <dl className="mx-auto mt-6 grid max-w-[1100px] grid-cols-2 gap-px overflow-hidden rounded-2xl bg-lf-line lg:grid-cols-4" data-reveal>
         {why.stats.map((s) => (
           <div key={s.label} className="flex flex-col-reverse bg-white px-6 py-6">
             <dt className="mt-1 text-sm leading-snug text-lf-text">{s.label}</dt>
@@ -257,7 +257,7 @@ export function Band() {
 /* ---------- FAQ ---------- */
 export function Faq() {
   return (
-    <section id="hoi-dap" className="px-4 py-12 md:px-6 md:py-16" aria-labelledby="faq-h">
+    <section id="hoi-dap" className="px-4 py-10 md:px-6 md:py-12" aria-labelledby="faq-h">
       <SectionTitle id="faq-h" title={faq.title} />
       <div className="mx-auto mt-8 max-w-[960px]" data-reveal>
         <div className="divide-y divide-lf-line border-y border-lf-line">

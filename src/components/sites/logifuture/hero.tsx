@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import { MoveRight } from 'lucide-react';
+import { MoveRight } from './icons';
 import { btnClass } from './btn';
 import { ConsultButton } from './consult';
 import { hero, IMG } from './content';
 
 // Hero dạng banner: ảnh nền phủ xanh, tiêu đề hai màu, hai dòng lợi ích, hai nút.
-export function Hero({ photo = `${IMG}/container-ship.webp` }: { photo?: string }) {
+export function Hero({ photo = `${IMG}/hero.webp` }: { photo?: string }) {
   return (
     <section id="top" className="relative isolate overflow-hidden bg-lf-night text-white">
-      <Image src={photo} alt={hero.imgAlt} fill priority sizes="100vw" className="lf-hero-photo -z-20 object-cover object-[60%_55%] grayscale" />
+      <Image src={photo} alt={hero.imgAlt} fill priority sizes="100vw" className="lf-hero-photo -z-20 object-cover object-[70%_50%]" />
       <div className="lf-hero-overlay absolute inset-0 -z-10" aria-hidden />
       <div className="mx-auto flex min-h-[560px] max-w-[1240px] items-center px-4 py-16 md:min-h-[620px] md:px-6 lg:min-h-[calc(100svh-64px)] lg:max-h-[760px] lg:py-20">
         <div className="max-w-[820px]">

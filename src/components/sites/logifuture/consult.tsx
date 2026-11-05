@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
-import { X } from 'lucide-react';
+import { X } from './icons';
 import { cn } from '@/lib/utils';
 import { btnClass } from './btn';
 import { consult, modules } from './content';
