@@ -12,6 +12,9 @@ Cập nhật: 06/11/2026.
 - Footer mới có CTA, giới thiệu, nhóm điều hướng, năng lực và mô hình doanh nghiệp.
 - Nền trong logo AI đổi trắng. Tiêu đề section dùng đủ chiều rộng, paragraph text-wrap pretty để hạn chế từ lẻ.
 - Thêm animation xuất hiện sơ đồ, mở accordion và scroll reveal; tắt theo prefers-reduced-motion.
+- Code đã push GitHub nhánh `main`: https://github.com/tramy0811/solution-logi — commit giao diện `16eaa94`.
+- Cập nhật production thành công: https://logifuture-livid.vercel.app — deployment `dpl_J9Z9j2dVEhJWzDTRmE1dD3QPghfo`, READY.
+- Lint, TypeScript, build và diff check đạt; kiểm tra 375/768/1024/1440px không tràn ngang, không anchor hỏng. Menu chọn đúng tab WMS; accordion tự đóng mục cũ; dòng hero thứ hai ở 375px hiển thị trên một dòng.
 
 ## Bản giải pháp logistics và Vercel
 
