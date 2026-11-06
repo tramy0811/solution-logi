@@ -17,8 +17,9 @@ import {
 } from './icons';
 import { btnClass } from './btn';
 import { ConsultButton } from './consult';
-import { band, connect, ecosystem, faq, footer, IMG, modules, tech, why } from './content';
+import { band, ecosystem, faq, footer, IMG, modules, tech, why } from './content';
 import { AiDiagram } from './ai-diagram';
+import { PartnerMarquee } from './partner-marquee';
 import { SectionTitle } from './section-title';
 import { Logo } from './site-header';
 import { userPhotos } from './user-images';
@@ -26,34 +27,8 @@ import { userPhotos } from './user-images';
 const reveal = (i = 0) => ({ 'data-reveal': '', style: { '--i': i } as React.CSSProperties });
 
 /* ---------- Dải logo hãng tàu, hãng bay: chạy ngang như CMS, xám khi nghỉ, hover ô trắng + màu gốc ---------- */
-function PartnerTrack({ hidden }: { hidden?: boolean }) {
-  return (
-    <ul className="lf-partner-track" aria-hidden={hidden || undefined}>
-      {connect.partners.map((p) => (
-        <li key={p.file} className="lf-partner">
-          {/* SVG tĩnh, không cần tối ưu ảnh của next/image */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${IMG}/partners/${p.file}`} alt={hidden ? '' : p.name} className={p.tall ? 'lf-partner-logo lf-partner-logo--tall' : 'lf-partner-logo'} loading="lazy" decoding="async" />
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 export function Connect() {
-  return (
-    <section className="border-b border-lf-line py-10 md:py-12" aria-labelledby="connect-h">
-      <h2 id="connect-h" className="px-4 text-center text-base font-medium text-lf-text md:text-lg" data-reveal>
-        {connect.title}
-      </h2>
-      <div className="lf-partner-viewport mt-6">
-        <div className="lf-partner-rail">
-          <PartnerTrack />
-          <PartnerTrack hidden />
-        </div>
-      </div>
-    </section>
-  );
+  return <PartnerMarquee />;
 }
 
 /* ---------- Nền tảng: lợi ích + sơ đồ hệ sinh thái ---------- */
@@ -126,25 +101,30 @@ export function Ecosystem() {
 const techIcons: IconType[] = [BrainCircuit, FileScan, Repeat2, Workflow, Cloud, KeyRound, Barcode, MapPin];
 
 export function Tech() {
+  const groups = [
+    { title: 'Thu thập & nhận dạng', sub: 'Ghi nhận dữ liệu từ chứng từ và hiện trường.', indexes: [1, 6, 7] },
+    { title: 'Kết nối & bảo mật', sub: 'Liên thông hệ thống, kiểm soát quyền truy cập.', indexes: [2, 5] },
+    { title: 'Xử lý & phân tích', sub: 'Vận hành dữ liệu và hỗ trợ xử lý nghiệp vụ.', indexes: [0, 3, 4] },
+  ];
   return (
-    <section className="bg-lf-soft px-4 py-10 md:px-6 md:py-12" aria-labelledby="tech-h">
+    <section id="cong-nghe" className="lf-section bg-lf-soft px-4 md:px-6" aria-labelledby="tech-h">
       <SectionTitle id="tech-h" title={tech.title} />
-      <ul className="mx-auto mt-6 grid max-w-[1100px] grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
-        {tech.items.map((t, i) => {
-          const Icon = techIcons[i];
-          return (
-            <li key={t} {...reveal(i)} className="group grid justify-items-center gap-3 text-center">
-              <span className="grid size-[72px] place-items-center rounded-2xl border border-lf-line bg-white text-lf-bright transition-[transform,background-color,color] duration-300 group-hover:-translate-y-1 group-hover:bg-lf-bright group-hover:text-white">
-                <Icon className="size-8" strokeWidth={1.5} aria-hidden />
-              </span>
-              <span className="text-sm font-medium text-lf-text">{t}</span>
-            </li>
-          );
-        })}
-      </ul>
-      <div className="mt-10 text-center" data-reveal>
-        <ConsultButton>{tech.cta}</ConsultButton>
-      </div>
+      <ol className="mx-auto mt-8 max-w-[1240px] divide-y divide-lf-line overflow-hidden rounded-xl border border-lf-line bg-white" data-reveal>
+        {groups.map((group, i) => (
+          <li key={group.title} className="grid gap-5 p-5 md:grid-cols-[1fr_1.4fr] md:items-center md:gap-8 md:px-7 md:py-6">
+            <div className="flex gap-4">
+              <span className="pt-1 text-xs tabular-nums text-lf-blue">0{i + 1}</span>
+              <div><h3 className="font-semibold text-lf-navy">{group.title}</h3><p className="mt-1 text-sm leading-relaxed text-lf-text">{group.sub}</p></div>
+            </div>
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-4 md:flex md:flex-wrap md:gap-x-7">
+              {group.indexes.map((index) => {
+                const Icon = techIcons[index];
+                return <li key={index} className="flex min-w-0 items-center gap-3 text-sm font-medium text-lf-navy md:min-w-[130px]"><Icon className="size-5 text-lf-blue" aria-hidden />{tech.items[index]}</li>;
+              })}
+            </ul>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

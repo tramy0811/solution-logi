@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight, ChevronsRight, Eye, GitBranch, Network, PiggyBank, Workflow, ShieldCheck, FileScan } from './icons';
-import type { IconType } from './icons';
+import { ArrowRight, ChevronsRight, PiggyBank, Workflow, ShieldCheck, FileScan, Check } from './icons';
 import { architecture, IMG, pains, posts, SAMPLE_LABEL, values } from './content';
 import { SectionTitle } from './section-title';
 
@@ -15,29 +14,38 @@ export function SampleBadge({ light = false }: { light?: boolean }) {
 }
 
 /* ---------- Kiểm soát & tối ưu vận hành: 4 thẻ giá trị ---------- */
-const valueIcons: IconType[] = [Eye, GitBranch, PiggyBank, Network];
-
 export function Values() {
+  const current = [
+    'Thông tin lô hàng nằm ở nhiều bộ phận, cần tổng hợp để nắm tiến độ.',
+    'Nhập lại dữ liệu, duyệt hồ sơ và bàn giao công việc qua nhiều kênh.',
+    'Doanh thu, chi phí và công nợ được đối chiếu ở các file riêng.',
+    'Nhu cầu mới thường kéo theo thêm công cụ và dữ liệu cần quản lý.',
+  ];
   return (
     <section id="loi-ich" className="lf-section px-5 md:px-6" aria-labelledby="values-h">
       <div className="mx-auto max-w-[1240px]">
         <SectionTitle id="values-h" title={values.title} sub={values.sub} />
-        <ol className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 overflow-hidden rounded-xl border border-lf-line" data-reveal>
+          <div className="hidden grid-cols-[0.85fr_1fr_1.2fr] bg-lf-navy text-sm font-medium text-white md:grid">
+            <p className="px-6 py-4">Trọng tâm quản trị</p>
+            <p className="px-6 py-4 text-white/75">Khi dữ liệu chưa kết nối</p>
+            <p className="bg-lf-blue px-6 py-4">Với LogiFuture</p>
+          </div>
+          <ol className="divide-y divide-lf-line">
           {values.items.map((v, i) => {
-            const Icon = valueIcons[i];
             return (
-              <li key={v.title} {...reveal(i)} className="group text-center">
-                <div className="flex justify-center">
-                  <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-lf-soft text-lf-blue">
-                    <Icon className="size-7" />
-                  </span>
+              <li key={v.title} className="grid md:grid-cols-[0.85fr_1fr_1.2fr]">
+                <div className="flex items-start gap-3 px-5 pb-3 pt-5 md:p-6">
+                  <span className="pt-0.5 text-xs tabular-nums text-lf-blue">0{i + 1}</span>
+                  <h3 className="text-base font-semibold leading-relaxed text-lf-navy">{v.title}</h3>
                 </div>
-                <h3 className="mt-4 text-lg font-medium leading-snug text-lf-navy">{v.title}</h3>
-                <p className="mt-2 leading-relaxed text-lf-text">{v.body}</p>
+                <p className="px-5 pb-4 text-sm leading-relaxed text-lf-text md:p-6"><span className="mb-1 block text-xs font-medium text-lf-text md:sr-only">Khi dữ liệu chưa kết nối</span>{current[i]}</p>
+                <p className="flex gap-3 bg-lf-soft p-5 text-sm leading-relaxed text-lf-navy md:p-6"><Check className="mt-1 size-3.5 shrink-0 text-lf-blue" aria-hidden /><span><span className="mb-1 block text-xs font-semibold text-lf-blue md:sr-only">Với LogiFuture</span>{v.body}</span></p>
               </li>
             );
           })}
-        </ol>
+          </ol>
+        </div>
       </div>
     </section>
   );

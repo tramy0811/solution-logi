@@ -2,6 +2,14 @@
 
 Cập nhật: 06/11/2026.
 
+## Lượt rà soát UI mới nhất
+
+- Xem `docs/UI_AUDIT_2026-11-06.md` cho phát hiện, cách sửa và kiểm tra.
+- Logo autoplay liên tục, có nút dừng/tiếp tục, ẩn scrollbar; reduced motion chạy chậm.
+- Lợi ích chuyển sang bảng đối chiếu; công nghệ phân ba lớp chức năng.
+- AI giữ nguyên nội dung, đổi thành sơ đồ luồng dữ liệu riêng của LogiFuture.
+- Đệm section mới 36px mobile / 48px desktop; giảm khoảng trắng cộng dồn.
+
 ## Cập nhật hero, điều hướng và bố cục theo yêu cầu mới
 
 - Hero dùng hai dòng: Nền tảng quản trị logistics toàn diện / thông minh tích hợp AI; mô tả giữ cấu trúc nội dung VTI và đổi sang nghiệp vụ logistics.

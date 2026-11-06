@@ -13,7 +13,7 @@ const metrics = [
 export function Hero() {
   return (
     <section id="top" className="lf-solution-hero relative isolate overflow-hidden text-white">
-      <Image src={`${IMG}/hero-port-v3.webp`} alt="" fill priority sizes="100vw" className="-z-20 object-cover opacity-20" />
+      <Image src={`${IMG}/hero-port-v3.webp`} alt="" fill loading="eager" fetchPriority="low" sizes="100vw" className="-z-20 object-cover opacity-20" />
       <div className="relative mx-auto max-w-[1320px] px-5 py-12 md:px-8 lg:py-14">
         <h1 tabIndex={-1} className="lf-rise text-[35px] font-semibold leading-[1.18] tracking-[-0.025em] outline-none sm:text-[46px] xl:text-[56px]">
           <span className="block">{hero.line1}</span>
@@ -36,7 +36,7 @@ export function Hero() {
             <div className="lf-rise mt-8" style={{ '--i': 3 } as React.CSSProperties}><ConsultButton>{hero.cta}<ArrowRight className="size-4" aria-hidden /></ConsultButton></div>
           </div>
           <div className="lf-hero-graphic relative mx-auto w-full max-w-[790px] lg:w-[112%] lg:max-w-none lg:justify-self-end">
-            <Image src={`${IMG}/hero-platform-user.webp`} alt="Sơ đồ LogiFuture Platform kết nối toàn bộ chuỗi logistics do doanh nghiệp cung cấp" width={1536} height={1024} priority sizes="(min-width: 1024px) 760px, 100vw" className="h-auto w-full" />
+            <Image src={`${IMG}/hero-platform-user.webp`} alt="Sơ đồ LogiFuture Platform kết nối toàn bộ chuỗi logistics do doanh nghiệp cung cấp" width={1536} height={1024} loading="eager" fetchPriority="high" sizes="(min-width: 1024px) 760px, 100vw" className="h-auto w-full" />
           </div>
         </div>
       </div>
